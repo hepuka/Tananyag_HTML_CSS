@@ -1,0 +1,58 @@
+/*Csak sorként vagy oszlopként használhatjuk
+
+ha sorban és oszlopban is dolgozunk akkor használjuk a GRID-et a Flexbox helyett*/
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-color: grey;
+}
+
+h1,
+h2 {
+  color: whitesmoke;
+  text-align: center;
+  letter-spacing: 4px;
+  margin: 40px 0;
+}
+
+.container {
+  background-color: azure;
+  font-size: 2rem;
+  display: flex; /*inline-flex-nél ugyanúgy egymás mellé rakja, de a div színe nem látszik*/
+}
+
+.container div {
+  height: 100px;
+  width: 100px;
+}
+
+.first {
+  background-color: aquamarine;
+}
+
+.second {
+  background-color: crimson;
+}
+
+.third {
+  background-color: darkkhaki;
+}
+
+.forth {
+  background-color: darkorange;
+}
+
+span {
+  width: 300px;
+}

@@ -1,0 +1,28 @@
+  /* 
+  - 7 sort hozunk létre ami egyenként 1fr magasságú
+  - a hét sort úgy állítjuk be, hogy a felső és az alsó sort auto-ra állítjuk, hogy annyival csökkentjen vagy növekedjen amennyi hely van. A maradék 5 sort fixen 116px magasságúra állítom
+  
+  */
+  grid-template-rows: auto repeat(5, 116px) auto;
+
+
+    /*Beállítom a sorok neveit, . kell használni ha a sort nem használjuk*/
+  grid-template-areas:
+    "." /*ebbe a sorba nem rakunk semmit*/
+    "details" /*ide jön a detils iv*/
+    "cinema" /*eezek a sorok kellenek a cinem div-nek*/
+    "cinema"
+    "cinema"
+    "reset" /*ide jön areset gomb*/
+    "."; /*ebbe a sorba nem rakunk semmit*/
+
+
+    /*a div.eket hozzárendelem a sorokhoz*/
+.movie-details-container {
+  grid-area: details;
+  align-self: end; /*a div aljára helyezi el a tartalmat*/
+
+
+    grid-template-columns: repeat(2, 30px) 50px repeat(3, 30px) 50px 30px;
+
+    

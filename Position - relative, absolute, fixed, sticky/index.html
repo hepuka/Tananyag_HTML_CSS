@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positions</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- https://www.w3schools.com/css/css_positioning.asp
+    
+    An element with position: relative; is positioned relative to its normal position.
+    
+    An element with position: fixed; is positioned relative to the viewport,
+    which means it always stays in the same place even if the page is scrolled. 
+    The top, right, bottom, and left properties are used to position the element.
+
+    An element with position: absolute; is positioned relative to the nearest 
+    positioned ancestor (instead of positioned relative to the viewport, like fixed).
+    A pozíció csak akkor működik ha az absolute div szülő elemei között van egy realtiv div
+    (absolute divnek egy relative divbenn kell lennie)
+    az absolute beállításai a relative divhez képest fognak elhelyezkedni
+
+    An element with position: sticky; is positioned based on the user's scroll position.
+    oldal tetejéhez tapad az elem, ha görgetjük az oldalt
+    -->
+
+    <div class="container">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="">első</a></li>
+            <li class="has-submenu">
+              <a href="">második</a>
+              <ul class="submenu">
+                <li><a href="">első almenü</a></li>
+                <li><a href="">második almenü</a></li>
+                <li><a href="">harmadik almenü</a></li>
+              </ul>
+            </li>
+            <li><a href="">harmadik</a></li>
+            <li><a href="">negyedik</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <h1>Lorem ipsum</h1>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          excepturi quo beatae nisi hic et cumque eaque, nobis assumenda!
+          Consectetur, blanditiis? Fuga, quibusdam similique ullam rem excepturi
+          nesciunt asperiores rerum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          excepturi quo beatae nisi hic et cumque eaque, nobis assumenda!
+          Consectetur, blanditiis? Fuga, quibusdam similique ullam rem excepturi
+          nesciunt asperiores rerum?
+        </p>
+
+        <h2>Lorem ipsum</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          excepturi quo beatae nisi hic et cumque eaque, nobis assumenda!
+          Consectetur, blanditiis? Fuga, quibusdam similique ullam rem excepturi
+          nesciunt asperiores rerum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          excepturi quo beatae nisi hic et cumque eaque, nobis assumenda!
+          Consectetur, blanditiis? Fuga, quibusdam similique ullam rem excepturi
+          nesciunt asperiores rerum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          excepturi quo beatae nisi hic et cumque eaque, nobis assumenda!
+          Consectetur, blanditiis? Fuga, quibusdam similique ullam rem excepturi
+          nesciunt asperiores rerum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          excepturi quo beatae nisi hic et cumque eaque, nobis assumenda!
+          Consectetur, blanditiis? Fuga, quibusdam similique ullam rem excepturi
+          nesciunt asperiores rerum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          excepturi quo beatae nisi hic et cumque eaque, nobis assumenda!
+          Consectetur, blanditiis? Fuga, quibusdam similique ullam rem excepturi
+          nesciunt asperiores rerum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          excepturi quo beatae nisi hic et cumque eaque, nobis assumenda!
+          Consectetur, blanditiis? Fuga, quibusdam similique ullam rem excepturi
+          nesciunt asperiores rerum?
+        </p>
+      </main>
+    </div>
+
+    <div class="cookie-accept">
+      Cookie szabályzat
+      <button>Elfogadom</button>
+    </div>
+  </body>
+</html>

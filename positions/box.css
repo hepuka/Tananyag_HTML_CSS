@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  /*nem csordul túl az elem.
+    az egyes elemekhez hozzáadott padding és margin nem növeli
+    az elem mértetét, hanem az eredti méretből veszi le, így
+    kisebb lesz a tartalmi rész*/
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "lato", sans-serif;
+}
+
+body {
+  background-color: grey;
+}
+
+h1,
+h2 {
+  color: whitesmoke;
+  text-align: center;
+  letter-spacing: 4px; /*méret pixelben*/
+}
+
+.green-container {
+  background-color: green;
+  width: 140px;
+}
+
+.yellow-container {
+  background-color: yellow;
+  padding: 20px;
+}
+
+div {
+  width: 150px;
+  height: 150px;
+  background-color: aqua;
+  /* margin-bottom: 10px;*/
+}
+
+.elso {
+  margin: 0 auto; /*középre rakja*/
+
+  /*display:none - nem jeleníti meg a böngésző*/
+}
+
+.kozepso {
+  margin-left: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,25 @@
+The text size can be set with a "vw" unit, which means the "viewport width".
+Resize the browser window to see how the text size scales.
+ <h1 style="font-size:10vw">Hello World</h1>
+
+Media Quries:
+ With media queries you can define completely different styles for different browser sizes.
+ /* Use a media query to add a break point at 800px: */
+ @media screen and (max-width: 800px) {
+   .left, .main, .right {
+     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+   }
+ }
+
+
+Images:
+If the CSS width property is set to 100%, the image will be responsive and scale up and down
+ <img src="img_girl.jpg" style="width:100%;"> 
+
+If the max-width property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:
+ <img src="img_girl.jpg" style="max-width:100%;height:auto;">
+
+
+//ezzel tudom kiválasztani a nagy css fájból, hogy melyik bellításokat használom csak
+//a purge csak azokat a beállításokat formálja át az scss-ből amelyek használva vannak a html-fájlban
+npm i gulp-purgecss --save-dev

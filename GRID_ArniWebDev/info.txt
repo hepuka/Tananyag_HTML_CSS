@@ -1,0 +1,70 @@
+https://www.youtube.com/watch?v=GYCeXNal4sA
+
+grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(3, auto);
+grid-template-columns: repeat(3, 1fr);
+grid-template-columns: 1fr 2fr 1fr;grid-template-columns: repeat(2, 2fr) 3fr repeat(2, 1fr);
+
+
+grid-template-rows: 500px;
+grid-template-rows: auto auto auto;
+grid-template-rows: 3fr 2fr 1fr;
+grid-template-rows: repeat(2, 3fr) 2fr 1fr;
+
+
+column-gap: ;
+  row-gap: ;
+  gap: sorérték oszlopérték;
+
+
+GRID LINES:
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 6;
+
+rövidített változata:
+  grid-row: 4/5;
+  grid-column: 3/4;
+
+
+horizontálisan igazít:
+  align-items: start;
+  align-items: end;
+  align-items: center;
+  align-items: stretch;
+
+vertikálisan igazít:
+  justify-items: start;
+  justify-items: end;
+  justify-items: center;
+
+
+a div bal fwlső sarába rakja az elemet
+  align-items: start,end,center,strech;
+  justify-items: start,end,center,strech;
+
+
+amikor a grid rács nem tölti ki a konténert:
+
+  horizontálisan igazít:
+   -justify-content:start,end,center,strech, space-around, space-between, space-evenly
+
+  vertikálisan igazít:
+    -align-content: start,end,center,strech,space-around, space-between, space-evenly
+
+
+align-items és a justify-items rövidített változata:
+
+  place-items: alignitems justifyitems;
+  place-content: aligncontent justifycontent;
+
+
+align-self | justify-self | place-self | Item
+
+külön-külön meghatározhatóak az egyes elemek a konténerben
+(a place content-el egyszerre állítjuk minden elemet)
+
+felvehetik: start,end,center,strech
+
+

@@ -1,0 +1,41 @@
+
+
+* {
+
+    box-sizing: border-box;
+}
+
+body, h1, p{
+
+    margin: 0;
+    padding: 0;
+}
+
+.block{
+
+    width: 29%;
+    float: left;
+    margin: 2%;
+    background-color: lightblue;
+}
+
+#parent-block{
+
+    height: 500px;
+    background-color: pink;
+    position: relative;
+}
+
+#block2{
+
+    position: relative;
+    top: 50px;
+
+}
+
+#special-message{
+
+    position: absolute;
+    left: 20px;
+    bottom: 100px;
+}

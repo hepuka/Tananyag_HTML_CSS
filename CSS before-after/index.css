@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+:root{
+
+    --yellow-color: #eec015;
+    --dark-yellow-color: #ee9f15;
+    --dark-blue3-color: #1c4c5e;
+    --white-color: #fff;
+    --black-color: #000;
+    --blue-color: #53b3d7;
+    --dark-blue-color: #378eae;
+    --dark-blue2-color: #26677f;
+    --body-background-color: #181818;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Quattrocento', serif;
+    font-size: 120%;
+    background: var(--body-background-color);
+    color: var(--white-color);
+    margin: 3%;
+
+}
+
+.col{
+    /*float és a width értékkel kerülnek egymás mellé a hasábok*/
+    float: left;
+    width: 50%;
+    padding: 0 1.5% 0 0;
+}
+
+/*második oszlopról levesszük a jobboldali 1.5%-os padding-et 
+és a baloldalira rakjuk rá*/
+.col:nth-child(2){
+
+    padding: 0 0 0 1.5%;
+}
+
+/*a második oszlop before szelektorát választjuk ki.
+amásodik oszlop hover háttere kék lesz*/
+.col:nth-child(2) .box::before{
+
+    background: var(--blue-color);
+    
+}
+
+.col:nth-child(2) .box:hover::before{
+
+    border-color: var(--dark-blue-color);
+        
+    }
+
+.col:nth-child(2) .box:hover a{
+
+    background: var(--dark-blue2-color);
+}
+
+/*kiszelektáljuk a 2.oszlopot
+majd box hover állapotát
+és a hover állapoton belüli a tag hover-jét*/
+.col:nth-child(2) .box:hover a:hover{
+
+    background: var(--dark-blue3-color);
+    color: var(--white-color);
+}
+
+
+.box{
+/*a .box before miatt kell relatívvá tenni, mert erre megy rá a sárga
+animált hover effekt*/
+    position: relative;
+}
+
+.box .image{
+
+    position: relative;
+
+}
+
+/*responsive doboz*/
+.box .image img{
+
+        width: 100%;
+        display: block;
+    
+}
+
+.box .image .title{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .8);
+    font-size: 150%;
+    color: var(--white-color);
+    font-family: 'Oswald';
+    padding: 2% 5%;
+    
+}
+
+.box .box-content{
+
+    padding: 5%;
+}
+
+
+.box .box-content p{
+
+    line-height: 1.6;
+    text-align: justify;
+    transition: all .5s;
+    
+}
+
+/*hover-nél a szöveg feketére vált*/
+.box:hover p{
+
+    color: var(--black-color);
+    transition: all .5s;
+}
+
+.box .box-content a{
+
+    color: var(--yellow-color);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--yellow-color);
+    margin: 10px 0;
+    padding: 10px 0 0 0;
+    display: inline-block; /*mivel az a tag inline típusú*/
+    transition: all .5s;/*késleltetés a hovernél*/
+}
+
+.box:hover a {
+
+    color: var(--white-color);
+    background: var(--black-color);
+    border-color: transparent;
+    padding: 5px 30px;
+
+}
+
+.box .box-content a:hover{
+
+    color: var(--white-color);
+    border-color: transparent;
+    background: var(--black-color);
+    padding: 5px 30px;
+    transition: all .5s;/*késleltetés a hovernél*/
+}
+
+/*ha rávisszük az egeret a dobozra akkor egy sárga hátterű, animált
+dobozra vált át. Ez lesz a hover utáni állapot, de ehhez erre meg kell
+írni külön a hover-t is. (.box:hover::before)*/
+.box::before{
+
+    content: '';
+    width: 100%;
+    background: var(--yellow-color);
+    position: absolute;
+    top: 0;
+    bottom: 100%;/*0-nál megjelenik a sárga doboz, de alapból ki kell tolni
+    mert csak a hover effekre kell, hogy látszódjon*/
+    left: 0;
+    z-index: -1; /*ezzel küldjük háttérbe a sárga dobozt*/
+    transition: all .5s;
+
+}
+
+.box:hover::before{
+
+bottom: 0;
+border-bottom: 10px solid var(--dark-yellow-color);
+    
+}
+
+/*a wrapper-ben lévő col elemek float-olása miatt a body felcsúszik 
+(sárga sáv az első dobozok felett, nincs meg a clearfix), 
+így clearfix kell a wrapper-re*/
+.wrapper:after{
+
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* bootstrap is a 768px-et használja gyárilag a mobilnézet töréspontjának*/
+@media(max-width:768px) {
+
+    body{
+
+        margin: 0;
+    }
+    
+    .col{
+        /*cél, hogy egymás alá kerüljenek az oszlopok ebben a nézetben*/
+        float: none;
+        width: 100%;
+        padding: 0;
+
+    }
+
+    .col:nth-child(2){
+
+        padding: 0;
+    }
+    
+}
+
+/*1000px-el alatt a betűméretet csökkentjük 90%-ra*/
+@media(max-width: 1000px) {
+
+    body{
+
+        font-size: 90%;
+    }
+
+}

@@ -1,0 +1,28 @@
+.first {
+  width: 50%;
+  border: 3px solid black;
+  overflow: hidden;
+  background-color: blue;
+  color: aliceblue;
+  margin-right: 5px;
+}
+.second {
+  width: 50%;
+  border: 3px solid black;
+  overflow: hidden; /* if you don't want #second to wrap below #first */
+  background-color: brown;
+  color: aliceblue;
+  margin-left: 5px;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  width: 500px;
+  overflow: hidden; /* add this to contain floated children */
+}

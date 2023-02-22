@@ -1,0 +1,248 @@
+body{
+
+    background-color: rgb(199, 179, 155);
+}
+
+p{
+
+    background-color: rgb(241, 236, 236);
+    margin: 20px;
+    padding: 10px;
+    text-indent: 20px;
+    text-align: justify;
+    line-height: 20px;
+    box-shadow: 2px 2px 5px black;
+}
+
+h2{
+
+    margin: 20px;
+    text-shadow: 2px 2px 5px gray;
+}
+
+h1{
+    background-color: gray;
+    color: white;
+    text-shadow: 3px 3px 10px black;
+    padding: 20px;
+}
+
+#hivatkozas{
+
+    text-decoration: none;
+    margin: 20px;
+    font-size: 16px;
+    margin: 40px auto; /* blokk eleműnek kell lenni, hogy automatikusan a nézet (viewport) közepére rakja */
+    padding: 10px;
+    display: block; /* alaphelyzetben inline elem, meg kell módosítani, hogy a margin, padding működjön */
+    width: 200px;
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 7px;
+
+}
+#hivatkozas:visited{
+
+    color: rgb(194,194,194);
+}
+
+#hivatkozas:hover{
+
+    color: greenyellow;
+}
+
+#hivatkozas:active{
+
+    color: greenyellow;
+}
+
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#doboz{
+
+   /* width: 50%; mindenkori ablakméret 50%-a lesz az elem szélessége*/
+    width: max(50%, 500px); /*kezdetben az ablakméret 50%-a lesz a méret, ha a méret 500px-el alá esik
+                            akkor fixen 500px lesz a szélesség.
+                            min-el is működik, akkor az ellentéte lesz az igaz*/
+
+    height: 400px;
+    background-color: green;
+    position: relative;
+/*     transition: transform 1s, width 1s, background-color 1s;
+    transition-delay: 0.3s;
+    transition-timing-function: linear; */
+   animation-name: zold-doboz; /*az oldal betöltődésekor fut le ez az animáció egyszer*/
+   animation-duration: 3s;
+   animation-delay: 1s;
+   animation-iteration-count: 2; /*2-szer ismétli az animációt*/
+   animation-fill-mode: forwards; /*az animáció végén a végállapotban marad*/
+}
+ 
+@keyframes zold-doboz{
+
+/*     from {background-color: green;}
+    to {background-color: red;} */
+
+    0% {background-color: green;}
+    50% {background-color: yellow;
+        width: 100px;}
+    100% {background-color: blue;}
+}
+
+#doboz:hover{
+
+ /*     width: 100px;
+   background-color: yellowgreen;
+    transform: translate(60px,0); */
+}
+
+
+#belso_doboz{
+
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    /* position: absolute; absolute a hozzá a legközelebbi relative elemhez képest működik */
+    position: fixed;
+    z-index: -1;
+    top: 100px;
+    left: 100px;
+}
+
+#elso_bekezdes{
+
+    z-index: -2; /*mivel nagyobb az érték mint a belső doboz z indexe így ez az elem a doboz felett
+    lesz majd. De ehhez az kell, hoyg ez az elem ne legyen position: static*/
+    position: relative;
+}
+
+.egymasmelle{
+
+    width: 200px;
+    float: left;
+}
+
+.kepfloat{
+
+   /* overflow: auto; ezzel a beállítással a kép nem nyúlik ki az őt tartalmazó dobozból.
+                    Ennél van jobb megoldás is.....*/
+
+}
+
+.kepfloat::after{ /*adott tároló összes tartalma utáni elemekre vonatkozik
+                        CLEARFIX hack*/
+    content: '';
+    clear: both;
+    display: table;
+
+}
+
+.kepfloat img{
+
+    width: 100px;
+    float: right;
+    padding: 10px;
+}
+
+/* navbar */
+
+nav{
+
+     position: sticky;
+     top:0;
+     z-index: 1;/*ettől lesz mindenelem fölött a menüsor*/
+}
+
+ul{
+
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+   
+}
+
+ul::after{ /*CLEARFIX hack az li float-olása miatt. Ezt a hacket mindig a szülő elemre kell rakni*/
+content: '';
+clear: both;
+display: table;
+
+}
+
+
+li{
+
+    float: left;
+}
+
+li a{
+    
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+
+}
+
+li a:hover{ /*pszeudo osztály az elem állapotot változtatja meg*/
+
+    background-color: white;
+    color: black;
+}
+
+p::first-letter{ /*pszeudo elem az elem szerkezetét módosítja*/
+
+   font-size: 2rem;
+}
+
+   a::before{
+
+    content:'* '; /*minden a elem elé beszúr egy *-ot*/
+   }
+
+   a::after{
+
+    content:'* '; /*minden a elem mögé beszúr egy *-ot*/
+
+   }
+
+   p::selection{ /*A selection az egérrel való kijelölését jelenti
+                    szöveg kijelölésekor a betűszín piros lesz.*/
+        color: red;
+   }
+
+   p{
+    user-select: none;
+   }
+
+   a[target="_blank"]{ /*attribútum szelektor, az elemet az attribútuma alapján válasszuk ki*/
+
+        color:red;
+
+   }
+
+   .mutasstobbet{
+
+    color: red;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   }
+
+   .mutasstobbet:hover{
+
+    white-space: normal;
+   }
+
+
+

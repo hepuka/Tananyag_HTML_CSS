@@ -1,0 +1,54 @@
+
+.container{
+
+    background-color: grey;
+    height: 600px;
+    display: flex;
+   /*flex-wrap: wrap; /*betöri a sort, ha az elemek már nem férnek el
+    flex-direction: row; */
+    flex-flow: row wrap; /*flex-wrap és a flex-direction shorthand megadása*/
+    
+    justify-content: space-around;
+    justify-content: space-between; /*justify-content horizontális rendezést ad sor esetén*/
+    justify-content: space-evenly;
+    justify-content: center; 
+
+    /*align items vízszintesen rendezi az elemeket*/
+    align-items: center;  /*ha csak egy soros elemek vannak akkor ezt használni*/        
+    align-content: center ;/*többsoros elemek esetén ezt, mert ez az elemek közötti
+                            távolságot is figyelembe veszi*/  
+    gap: 50px;
+
+
+}
+
+.item{
+
+    background-color: yellowgreen;
+    outline: 1px solid black;
+  /*   width: 100px; */
+    height: 100px;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 40px 20px 0 20px;
+    margin: 10px;
+    /*display: inline;    egymás mellé berakja az item diveket, mert inline elem lett*/
+     /*float: left;       ha nem férnek már el egymás mellett, akkor egymás alá kerülnek*/ 
+     flex-basis: 100px; /*az elem szélességét adja meg*/
+}
+
+@media (max-width: 600px){ /*ha 500 alá esik a képernyő mérete*/
+    .container{
+
+        flex-flow: column;
+        height: auto;
+        padding: 20px;
+    } 
+
+    .item{
+
+       width: 100%;  /*felveszi az őt befoglaló konténer szélességét*/
+        box-sizing: border-box;
+    }
+}
