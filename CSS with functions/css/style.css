@@ -17,7 +17,7 @@
 
   /* COLOR */
   --BGCOLOR: #475569;
-  --ALT-BGCOLOR: #1E293B;
+  --ALT-BGCOLOR: #1e293b;
   --RADIAL-COLOR: whitesmoke;
   --LIGHT-COLOR: whitesmoke;
   --DARK-COLOR: #000;
@@ -45,7 +45,6 @@
 body {
   font: var(--FS) var(--FF);
   min-height: 100vh;
-
   background-color: var(--BGCOLOR);
   background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR));
   display: flex;
