@@ -8,7 +8,7 @@
 
 html {
   font-size: 1.5rem;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 body {
@@ -36,25 +36,25 @@ div {
 
 div:first-child {
   background-color: dodgerblue;
-  /* transform: translateX(-50%); */
-  /* transform: rotateX(180deg); */
-  /* transform: scaleX(120%); */
-  /* transform: skewX(-10deg); */
+  /* transform: translateX(-50%);  eltolja az elemet balra*/
+  /* transform: rotateX(180deg); elforgatja az elemet*/
+  /* transform: scaleX(120%); horizontálisan növeli meg az elemet 120%-ra*/
+  /* transform: skewX(-10deg); függőleges vonalakat tolja el*/
 }
 
 div:nth-child(2) {
   background-color: yellow;
   /* transform: translateY(-2rem); */
   /* transform: rotateY(180deg); */
-  /* transform: scaleY(120%); */
-  /* transform: skewY(10deg); */
+  /* transform: scaleY(120%); függőlegesen növeli meg az elemet/
+  /* transform: skewY(10deg); horizontális vonalakat tolja el*/
 }
 
 div:last-child {
   background-color: limegreen;
   /* transform: translate(100%, -5rem); */
   /* transform: rotate(78deg); */
-  /* transform: scale(50%, 50%); */
+  /* transform: scale(50%, 50%); hor.és függőlegesen is lecsökkenti az elemet */
   /* transform: skew(-10deg, -10deg); */
 }
 
@@ -79,7 +79,7 @@ div:last-child:hover {
   animation-iteration-count: 2;
   animation-direction: normal;
   animation-fill-mode: forwards; */
-  animation: 5s ease-in-out 1s 2 normal forwards slide;
+  animation: 5s ease-in-out 1s 1 normal forwards slide;
 }
 
 @keyframes slide {
