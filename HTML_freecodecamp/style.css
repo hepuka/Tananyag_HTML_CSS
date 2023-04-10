@@ -1,0 +1,21 @@
+* {
+  background-color: #333;
+  color: whitesmoke;
+}
+
+hr {
+  margin: 30px 0;
+}
+
+a {
+  color: aliceblue;
+}
+
+a:visited {
+  color: yellow;
+}
+
+a:hover,
+a:active {
+  color: red;
+}

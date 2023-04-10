@@ -1,12 +1,185 @@
+<!-- Here are the block-level elements in HTML:
+
+<address> <article> <aside> <blockquote>
+<canvas> <dd> <div> <dl> <dt> <fieldset>
+<figcaption> <figure> <footer> <form>
+<h1>-<h6> <header> <hr> <li> <main> <nav>
+<noscript> <ol> <p> <pre> <section>
+<table> <tfoot> <ul> <video> -->
+
+<!-- Here are the inline elements in HTML:
+
+<a><abbr><acronym>
+<b><bdo><big><br><button>
+<cite> <code>
+<dfn>
+<em>
+<i> <img> <input>
+<kbd>
+<label>
+<map>
+<object> <output>
+<q>
+<samp> <script> <select> <small> <span> <strong> <sub> <sup>
+<textarea> <time> <tt>
+<var> -->
+
+<!--
+    SEMANTIC ELEMENTS:
+
+    nav
+    section
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>freecodecamp</title>
   </head>
   <body>
-    <h1>hell</h1>
+    <h1>HTML - freecodecamp</h1>
+    <hr />
+    <h2>Ebben a szövegben <em> ez egy em elem</em></h2>
+    <h3>Ebben a szövegben <strong> ez egy strong elem</strong></h3>
+
+    <hr />
+    <p>
+      Lorem ipsum dolor sit amet:
+      <br />&nbsp;&nbsp;&nbsp; ...consectetur adipisicing elit
+      <br />&nbsp;&nbsp;&nbsp; ...Nihil ducimus quibusdam blanditiis
+      <br />&nbsp;&nbsp;&nbsp; ...ibero! Ipsam quisquam velit, ut consequatur.
+    </p>
+
+    <hr />
+    &lt; &lt; &lt; &copy;
+    <a href="./about.html" target="_blank">Zoltan KUN-FAGYAL</a> &gt;&gt;&gt;
+
+    <hr />
+
+    <p>
+      Ebben a szögben ez <abbr title="Mozilla Developer Network">MDN</abbr> egy
+      rövidítés
+    </p>
+
+    <hr />
+
+    <p>Ez egy address elem:</p>
+    <address>
+      Lorem, ipsum dolor sit amet consectetur <br />
+      adipisicing elit. <br />
+      Voluptatibus voluptatem ullam cupiditate.
+    </address>
+
+    <hr />
+
+    <h2>Lists</h2>
+
+    <ol>
+      <li>rendezett lista1</li>
+      <li>lista2</li>
+      <li>lista3</li>
+      <li>lista4</li>
+    </ol>
+
+    <ul>
+      <li>rendezetlen lista1</li>
+      <li>lista2</li>
+      <li>lista3</li>
+      <li>lista4</li>
+    </ul>
+
+    <dl>
+      <dt>description list1</dt>
+      <dd>Ez a lista 1</dd>
+      <dt>description list2</dt>
+      <dd>Ez a lista 2</dd>
+      <dt>description list3</dt>
+      <dd>Ez a lista 3</dd>
+    </dl>
+
+    <hr />
+
+    <h2>Links</h2>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="#section1">Jump to Section 1</a>
+        </li>
+        <li>
+          <a href="#section2">Jump to Section 2</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="section1">
+      <p>
+        Ebben a szögben ez
+        <abbr title="Mozilla Developer Network"
+          ><a href="https://developer.mozilla.org/" target="_blank"
+            >MDN</a
+          ></abbr
+        >
+        egy rövidítés linkkel
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam sequi
+        minima velit maiores, facilis earum. Veniam earum ullam in eius officia
+        aperiam vitae nisi quo, a explicabo. Dolor, delectus doloremque! Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Quo aliquam delectus
+        nobis consequatur aliquid cupiditate accusantium sint earum commodi
+        beatae incidunt repellat natus corporis expedita quod maiores, ad nihil
+        vitae!
+      </p>
+    </section>
+
+    <section id="section2">
+      <p>
+        Ebben a szögben ez
+        <abbr title="Mozilla Developer Network"
+          ><a href="https://developer.mozilla.org/" target="_blank"
+            >MDN</a
+          ></abbr
+        >
+        egy rövidítés linkkel
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam sequi
+        minima velit maiores, facilis earum. Veniam earum ullam in eius officia
+        aperiam vitae nisi quo, a explicabo. Dolor, delectus doloremque! Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Quo aliquam delectus
+        nobis consequatur aliquid cupiditate accusantium sint earum commodi
+        beatae incidunt repellat natus corporis expedita quod maiores, ad nihil
+        vitae!
+      </p>
+    </section>
+
+    <ul>
+      <li>
+        Donwnload an
+        <a href="./HTML5.png" download="">HTML5 favicon</a>
+      </li>
+
+      <li>
+        Contact me at
+        <a href="mailto:random@email.com"> my email address</a>
+      </li>
+      <li>
+        Dial me at
+        <a href="tel:+36302031789"> my phone number</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    &lt; &lt; &lt; &copy;
+    <a href="./about.html" target="_blank">Zoltan KUN-FAGYAL</a> &gt;&gt;&gt;
+    <p>
+      <a href="#">Back to top</a>
+    </p>
   </body>
 </html>
