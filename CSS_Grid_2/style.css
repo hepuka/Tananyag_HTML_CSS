@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 10px;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* grid-auto-rows: minmax(100px, au); */
+  /* grid-template-rows: 200px 100px 200px; */
+  /* grid-template-rows: repeat(3, 1fr); */
+  /* justify-content: center;
+  align-items: stretch; */
+  gap: 10px;
+}
+
+.item {
+  background: steelblue;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px;
+  border: skyblue 1px solid;
+}
+
+/* .item:nth-child(2) {
+  height: 100px;
+  width: 100px;
+  align-self: flex-start;
+}
+
+.item:nth-child(1) {
+  background-color: #000;
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.item:nth-child(3) {
+  background-color: #333;
+  grid-row: 2/4;
+}
+
+.item:nth-child(4) {
+  background-color: #333;
+  grid-row: 2/4;
+} */
+
+@media (max-width: 500px) {
+  .container {
+    /*minden div egymás alatt lesz*/
+    grid-template-columns: 1fr;
+  }
+}

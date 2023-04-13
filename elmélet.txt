@@ -23,3 +23,31 @@ If the max-width property is set to 100%, the image will scale down if it has to
 //ezzel tudom kiválasztani a nagy css fájból, hogy melyik bellításokat használom csak
 //a purge csak azokat a beállításokat formálja át az scss-ből amelyek használva vannak a html-fájlban
 npm i gulp-purgecss --save-dev
+
+ 
+block-level elements:
+<address> <dd> <div> <dl> <dt> <fieldset> <figcaption> <figure> footer>
+<article> <form>  <h1>  <h6>  <header>  <hr>  <li>  <main>  <nav> <noscript>
+<ol>  <p> <pre> <section> <table> <tfoot> <ul>  <video> <aside> <blockquote> <canvas>
+
+
+inline elements:
+<a> <abbr>  <acronym> <b> <bdo> <big> <br>  <button>  <cite>  <code>  <dfn> <em>  <i>
+<img> <input> <kbd> <label> <map> <object>  <output>  <q> <samp>  <script>  <select>
+<small> <span>  <strong>  <sub> <sup> <textarea>  <time>  <tt>  <var>
+
+
+Text style:
+<b> - Bold text
+<strong> - Important text
+<i> - Italic text
+<em> - Emphasized text
+<mark> - Marked text
+<small> - Smaller text
+<del> - Deleted text
+<ins> - Inserted text
+<sub> - Subscript text
+<sup> - Superscript text
+
+</br> - break row
+</blockquote> - bekezdés behúzása

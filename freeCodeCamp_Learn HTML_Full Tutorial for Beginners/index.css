@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+
+   font-size: 16px;
+   height: 100%;
+}
+
+body{
+
+    background-color: DarkSlateGrey;
+    color: azure;
+    font-size: 15px;
+   /* font-family: 'Roboto', sans-serif;*/
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+
+   /*  ezzel a sorral egyberakható a font-size, line.height, font-family */
+   /* font: 15px/25px arial;*/
+
+/*     background-image: url(./images/goldengate.jpeg);
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* háttérkép statikus marad a görgetéskor */
+} */
+
+a:link{
+    color: aliceblue;
+}
+
+a:visited{
+    color: lightgray;
+}
+
+a:hover, a:active{
+
+    color: #eee;
+}
+
+table,tr,th,td,caption{
+
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    padding: 0.5rem;
+}
+
+.box{
+    background-color: white;
+    color: black;
+
+    width: 90%; /*arra a div-re amely magának az oldal tartalmát tartalmazza, ajánlott
+                    90%-ra rakni, így a rendelkezésre álló helynek csak a 90%-át töltheti csak ki3*/
+
+    max-width: 600px;
+    /*fixen megadott width-et nem használunk a reszponzivitás miatt,helyette a max-width-et kell
+    alkalmazni, ami azt jelenti, hogy bármekkora lehet a mérete de ettől nem nagyobb.
+    
+    ha csökkenjük az ablakméretet, annak függvényében méreteződik át a div (reszponzivitás)*/
+
+
+
+    /*padding: 20px; de lehet paddig-left vagy right is, ha 4 oldalt külön szeretnénk kezelni*/
+/*    
+ez a megoldás azért nem jómert ha növelem a paddinget, akkor az megnöveli a doboz méretét
+(szélességét) is, ezért igazítani kell folyamatosan a doboz méretét.
+
+Ezért kell használni a box-sizing-ot , 2 típus: content-box, border-box
+*/
+
+    box-sizing: border-box; /* a padding értéke nem fog hozzáadódni a doboz méretéhez.
+                                általában a css lap legelejére rakjuk, hogy minden oldalra
+                                érvényes legyen.*/
+/*
+    border-width: 10px;
+    border-style: solid;
+    border-color: blueviolet;*/
+    
+    /* rövidebben - shorthand  megadással
+    border: 10px solid blueviolet;*/
+
+    margin: 40px auto;    /* automatikusan elosztja a két oldalon rendelkezésre álló helyet,
+                    ezért középre rendezi a div-et */
+    
+    box-shadow: 0 0 30px rgba(0,0,0,0.7); /*függőleges eltolás-vízszintes eltolás-árnyék kiterjedése-szín*/
+}
+
+
+.box-content{
+
+    padding: 20px;
+}
+
+.box-content h2 {  /* a box-content belüli h2 elemre vonatkozik*/
+
+    margin: 0px;
+    color: brown;
+
+}
+
+.box-content p {
+
+    color: cadetblue;
+    text-align: justify; /*sorkizártat használ*/
+
+}
+
+.box .header-image{
+
+    background-image: url(./images/elizeu-dias-RN6ts8IZ4_0-unsplash2.jpg);
+    background-position:center;
+    height: 200px;
+
+}
+
+.box.box-2 .header-image{ /*ha egy elemre két db class van rakva akkor .box.box-2 a hivatkozás, majd
+                                szóközzel ellátva a class-on belüli elem
+                                
+                                .box.box-2 megadással a box-2 örökölni fogja a box osztály tulajdonságait.
+                                csak a background-image tulajdonságot írtuk felül
+                                */
+
+    background-image: url(./images/sean-oulashin-KMn4VEeEPR8-unsplash1.jpg);
+}
+
+
+/*CSS display Property
+https://www.w3schools.com/cssref/pr_class_display.asp
+
+display: inline - nem csinál sortörést, és nem veszi figyelembe a szélsességi és a magassági értékeket sem
+display: block - sortörést használ, kitölti a sorban a rendelkezésre álló helyet
+display: inline-block - nem tölti ki a rendelkezésre álló helyet, de figyelembe veszi a margin-t
+padding-et, szélességet, magasságot. (nem tölti ki a teret, de a block tulajdonságait hasznája)
+*/
+
+.details a {
+
+    background-color: burlywood;
+    color: black;
+    display: inline-block; 
+    padding: 5px 10px; /*felül 5px, kétoldalt 10px*/
+    text-decoration: none; /*nem húzza alá a linket*/
+
+}
+
+.details {
+
+margin: 16px 0 0 0; /*felül-jobb-alul-bal*/
+
+}
+
+h1{
+
+    margin: 20px;
+}

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>alapok</title>
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- favicon létrehozása-->
+    <link rel="icon" href="./images/html5.png" />
+
+    <!--
+    Inline - by using the style attribute inside HTML elements
+    Internal - by using a <style> element in the <head> section
+    External - by using a <link> element to link to an external CSS file
+
+-->
+  </head>
+  <body>
+    <p>Let me tell you how:</p>
+    <p title="I'm a tooltip">This is a paragraph.</p>
+
+    <p>
+      WWF's goal is to:
+      <q>Build a future where people live in harmony with nature.</q>
+    </p>
+    <p>
+      The <abbr title="World Health Organization">WHO</abbr> was founded in
+      1948.
+    </p>
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+    <bdo dir="rtl">This text will be written from right to left</bdo>
+
+    <br />...I learn more about... <br />...I learn more about... <br />...I
+    learn more about...
+
+    <h1>Colors</h1>
+    <h1 style="background-color: rgb(255, 99, 71)">...</h1>
+    <h1 style="background-color: #ff6347">...</h1>
+    <!--hexadecimális értékben megadva -->
+
+    <h1 style="background-color: hsl(9, 100%, 64%)">Colors</h1>
+
+    <!--
+    hsl(hue, saturation, lightness) 
+    Hue is a degree on the color wheel from 0 to
+    360. 0 is red, 120 is green, and 240 is blue. 
+    Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color. 
+    Lightness is also a percentage value, 0% is black, and 100% is white.
+    -->
+
+    <h1 style="background-color: rgba(255, 99, 71, 0.5)">...</h1>
+    <h1 style="background-color: hsla(9, 100%, 64%, 0.5)">...</h1>
+
+    <h1>SEMANTIC HTML</h1>
+    <section id="html">
+      <h1>Section tag</h1>
+
+      <p>
+        Lorem ipsum dolor, Quam aliquid, voluptate deleniti reprehenderit
+        sapiente consequuntur iusto ad odit rerum in quia debitis soluta maxime
+        dolore illo modi accusantium eos culpa.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+        similique architecto, dignissimos aspernatur consectetur accusantium
+        magnam aperiam, unde obcaecati nobis veniam. Veniam pariatur, quibusdam
+        iure voluptas veritatis mollitia sed quam?
+      </p>
+    </section>
+
+    <h1>Nav tag, Bookmarks</h1>
+
+    <nav aria-label="primary-navigation">
+      <ul>
+        <li>
+          <a href="#html">JUMP TO HTML SECTION</a>
+        </li>
+
+        <li>
+          <a href="#article">JUMP TO ARTICLE TAG</a>
+        </li>
+      </ul>
+    </nav>
+
+    <article id="article">
+      <h1>Article tag</h1>
+      <p>
+        Lorem ipsum dolor sit laborum soluta deserunt corporis similique ratione
+        aperiam quasi amet temporibus asperiores fugiat sit, harum minima
+        aliquam molestiae voluptas eveniet at id iste?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe placeat
+        tenetur, ut laboriosam magni aut a impedit perspiciatis asperiores vitae
+        natus iusto atque voluptate corrupti animi officiis velit consequuntur
+        aliquid.
+      </p>
+    </article>
+
+    <aside>
+      <h1>Aside tag</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum soluta
+        deserunt corporis similique ratione aperiam quasi amet temporibus
+        asperiores fugiat sit, harum minima aliquam molestiae voluptas eveniet
+        at id iste?
+      </p>
+
+      <p>Here is a quote from WWF's website:</p>
+      <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 50 years, WWF has been protecting the future of nature. The world's
+        leading conservation organization, WWF works in 100 countries and is
+        supported by 1.2 million members in the United States and close to 5
+        million globally.
+      </blockquote>
+    </aside>
+
+    <hr />
+
+    <h2>Elements</h2>
+
+    <span>span element</span> <br /><br />
+
+    &lt;&lt;&lt; &copy; Kun-Fagyal Zoltán &gt;&gt;&gt; <br />
+
+    <p>
+      <code>&lt;h1&gt;IMAGE&lt;h1&gt; </code>
+    </p>
+
+    &lt;&lt;&lt; &copy;
+    <a href="./about.html">Kun-Fagyal Zoltán</a> &gt;&gt;&gt; <br /><br />
+
+    <em>..I learn more about. </em> <br /><br />
+    <strong>amet consectetur adipisicing elit.</strong>
+
+    <h3>Abbreviation element</h3>
+
+    <abbr title="Mozilla Dev ">MDN</abbr>
+
+    <h3>Address element</h3>
+    <address>
+      4027 <br />
+      Debrecen <br />
+      Sinay Miklós utca 35. 9/40. <br />
+      Hungary
+    </address>
+
+    <!--Comment element-->
+
+    <hr />
+
+    <h2>Links</h2>
+
+    <p>
+      <a href="https://www.origo.hu" target="_blank">Origo</a>
+    </p>
+
+    <!--
+    The target attribute can have one of the following values:
+    _self - Default. Opens the document in the same window/tab as it was clicked
+    _blank - Opens the document in a new window or tab
+    _parent - Opens the document in the parent frame
+    _top - Opens the document in the full body of the window
+    -->
+
+    <p>
+      <a href="./about.html">About</a>
+    </p>
+
+    <p>
+      <a href="#">BACK TO TOP</a>
+    </p>
+
+    <button onclick="document.location='https://www.google.hu'">
+      Button as a Link
+    </button>
+
+    <hr />
+
+    <h1>LISTS</h1>
+
+    <h2>Ordered list</h2>
+
+    <ol>
+      <li>step1</li>
+      <li>step2</li>
+      <ol>
+        <li>stepA</li>
+        <li>stepB</li>
+        <li>stepC</li>
+      </ol>
+      <li>step3</li>
+    </ol>
+
+    <ol>
+      <li>step1</li>
+      <li>step2</li>
+      <ol type="a">
+        <li>stepA</li>
+        <li>stepB</li>
+        <li>stepC</li>
+      </ol>
+      <li>step3</li>
+    </ol>
+
+    <h2>Unordered list</h2>
+
+    <ul>
+      <li>
+        <img
+          src="./images/caribbean.jpg"
+          alt=""
+          width="400"
+          height="225"
+          loading="lazy"
+        />
+      </li>
+      <li>step2</li>
+      <ol>
+        <li>stepA</li>
+        <li>stepB</li>
+        <li>stepC</li>
+      </ol>
+      <li>step3</li>
+    </ul>
+
+    <h2>Description list</h2>
+
+    <dl>
+      <dt>term1</dt>
+      <dd>Description part</dd>
+
+      <dt>term2</dt>
+      <dd>Description here</dd>
+    </dl>
+
+    <hr />
+
+    <h1>IMAGES</h1>
+
+    <figure>
+      <img
+        src="./images/goldengate.jpeg"
+        width="200"
+        height="125"
+        alt="GoldenGateBridge"
+      />
+      <figcaption>A picture of the Golden Gate Bridge</figcaption>
+    </figure>
+
+    <img
+      src="./images/html_logo_300x300.png"
+      alt="html5 logo"
+      title="HTML5 logo"
+      width="300"
+      height="300"
+    />
+
+    <hr />
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ut ipsum
+      perspiciatis tempore praesentium accusantium, ab in fuga sint, neque
+      nostrum eos repudiandae hic? Quis veniam voluptates ab repellendus minima!
+    </p>
+    <pre>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi porro veritatis
+         ipsam eum reiciendis est enim cumque accusantium distinctio nihil pariatur, cupiditate recusandae natus
+          maxime adipisci laudantium praesentium id.
+          </pre
+    >
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, vel
+      eveniet quae eius soluta exercitationem blanditiis quas voluptatum,
+      reprehenderit officiis consectetur sunt sed molestiae similique,
+      dignissimos ea eos? Reprehenderit, quaerat.
+    </p>
+
+    <hr />
+
+    <h1>TABLES</h1>
+
+    <table>
+      <caption>
+        <!-- táblázat címét jelöli -->
+        My Daily Schedule
+      </caption>
+
+      <thead>
+        <tr>
+          <th>&nbsp;</th>
+          <th scope="col">Time</th>
+          <th scope="col">Activity</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">Morning</th>
+          <td>
+            <time datetime="08:00">8am</time> -
+            <time datetime="11:00">11am</time>
+          </td>
+          <td>Write Code</td>
+        </tr>
+
+        <tr>
+          <th scope="row">Break</th>
+          <td>
+            <time datetime="11:00">11am</time> -
+            <time datetime="12:00">12pm</time>
+          </td>
+          <td>Eat Lunch</td>
+        </tr>
+
+        <tr>
+          <th scope="row">Afternoon</th>
+          <td>
+            <time datetime="12:00">12pm</time> -
+            <time datetime="17:00">5pm</time>
+          </td>
+          <td>Study for other courses</td>
+        </tr>
+
+        <tr>
+          <th scope="row">Evening</th>
+          <td rowspan="2">All other times</td>
+          <td>Free time</td>
+        </tr>
+
+        <tr>
+          <th scope="row">Night</th>
+          <td>Sleep</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">
+            And that's what I do every day, 5 days a week. Just eat, sleep, code
+            ..and recharge!
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <hr />
+
+    <h1>FORMS & INPUTS</h1>
+
+    <article id="contact">
+      <h2>Contact Me</h2>
+
+      <form action="https://httpbin.org/get" method="get">
+        <fieldset>
+          <legend>Personal Info</legend>
+          <p>
+            <!--for és az id-nak szükséges megegyeznie-->
+            <label for="firstName">First Name:</label>
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              placeholder="Jane"
+              autocomplete="on"
+              required
+              autofocus
+            />
+          </p>
+          <p>
+            <label for="lastName">Last Name:</label>
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              placeholder="Doe"
+              autocomplete="on"
+              required
+            />
+          </p>
+          <p>
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="your secret"
+              required
+            />
+          </p>
+          <p>
+            <label for="phone">Phone:</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="+3630-1111-222"
+              pattern="+[0-9]{4}-[0-9]{4}-[0-9]{3}"
+              required
+            />
+          </p>
+          <p>
+            <label for="decade">Favorite Decade:</label>
+            <input
+              type="number"
+              name="decade"
+              id="decade"
+              min="1950"
+              max="2022"
+              step="5"
+              value="1975"
+            />
+          </p>
+          <p>
+            <label for="coffee">Favorite Coffee:</label>
+            <!--
+                normál legördülő menüként a multiple size="7" nem kell bele
+            -->
+
+            <!-- hagyományos legördülőmenüként (nekem ez a legjobb)
+            <p>
+              <label for="coffee">Favorite Coffee:</label>
+              <input type="text" name="coffee" id="coffee" list="coffee-list">
+              <datalist id="coffee-list">
+                  <option value="coffee">
+                  <option value="latte">
+                  <option value="espresso">
+                  <option value="cortado">
+                  <option value="americano">
+                  <option value="other">
+              </datalist>
+          </p> 
+        -->
+            <select name="coffee" id="coffee" multiple size="7">
+              <optgroup label="Coffees">
+                <option value="regular coffee">Regular Coffee</option>
+                <option value="iced coffee">Iced Coffee</option>
+              </optgroup>
+              <optgroup label="Espresso Drinks">
+                <option value="latte" selected>Latte</option>
+                <option value="cappuccino">Cappuccino</option>
+                <option value="cortado">Cortado</option>
+                <option value="americano">Americano</option>
+              </optgroup>
+              <option value="other">Other</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <br />
+
+        <fieldset>
+          <legend>What is your favorite food?</legend>
+          <p>
+            <!-- radio gombnál a name-nek meg kell egyeznie-->
+            <input type="radio" name="food" id="tacos" value="tacos" />
+            <label for="tacos">Tacos</label>
+          </p>
+          <p>
+            <input type="radio" name="food" id="pizza" value="pizza" />
+            <label for="pizza">Pizza</label>
+          </p>
+          <p>
+            <input type="radio" name="food" id="other" value="other" />
+            <label for="other">Other</label>
+          </p>
+        </fieldset>
+
+        <br />
+
+        <fieldset>
+          <legend>Do you have pets?</legend>
+          <p>
+            <input type="checkbox" name="pets" id="dog" value="dog" />
+            <label for="dog">Dog</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="cat" value="cat" />
+            <label for="cat">Cat</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="fish" value="fish" />
+            <label for="fish">Fish</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="otherPet" value="otherPet" />
+            <label for="otherPet">Other</label>
+          </p>
+        </fieldset>
+
+        <br />
+
+        <fieldset>
+          <legend>Send Me A Note</legend>
+          <label for="message">Your Message:</label>
+          <br />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Type your message here"
+          ></textarea>
+        </fieldset>
+
+        <br />
+
+        <button type="submit">Submit</button>
+        <input type="submit" value="Submit" />
+
+        <button
+          type="submit"
+          formaction="https://httpbin.org/post"
+          formmethod="post"
+        >
+          Post
+        </button>
+
+        <button type="reset">Reset</button>
+      </form>
+    </article>
+
+    <hr />
+
+    <h1>BOX MODEL</h1>
+
+    <div class="box">
+      <div class="header-image"></div>
+      <div class="box-content">
+        <h2>Hív a természet</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui
+          maiores, dolorem aut id cumque commodi quam quas? Corporis veritatis
+          deleniti quos magnam ducimus odio repellat excepturi consequuntur
+          vitae aspernatur?
+        </p>
+        <p class="details"><a href="">Megnézem</a></p>
+      </div>
+    </div>
+
+    <div class="box box-2">
+      <div class="header-image"></div>
+      <div class="box-content">
+        <h2>Hív a természet</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui
+          maiores, dolorem aut id cumque commodi quam quas? Corporis veritatis
+          deleniti quos magnam ducimus odio repellat excepturi consequuntur
+          vitae aspernatur?
+        </p>
+        <p class="details"><a href="">Megnézem</a></p>
+      </div>
+    </div>
+
+    <hr />
+
+    <h1>Float layout, clearfix</h1>
+
+    <p><a href="../Float layout, clearfix/index.html">Megnyitás</a></p>
+
+    <hr />
+
+    <h1>Position: relative, absolute, fixed, sticky</h1>
+
+    <a href="https://www.w3schools.com/css/css_positioning.asp">W3 link</a>
+    <hr />
+    <footer>
+      <p>
+        &lt;&lt;&lt; &copy;
+        <a href="about.html">Kun-Fagyal Zoltán</a> &gt;&gt;&gt;
+      </p>
+      <p>
+        <a href="#">Back to Top</a>
+      </p>
+    </footer>
+  </body>
+</html>

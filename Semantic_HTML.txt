@@ -1,0 +1,62 @@
+
+SEMANTIC ELEMENTS:
+<article> - Defines an independent, self-contained content
+
+<aside> - Defines content aside from the content (like a sidebar),Defines content aside from the page content
+<details> - Defines additional details that the user can open and close on demand.Defines additional details that the user can view or hide
+<figcaption> - Defines a caption for a <figure> element
+<figure> 	- Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+<footer> - Defines a footer for a document or a section
+<header> - Defines a header for a document or a section
+<main> 	Specifies the main content of a document
+<mark> 	Defines marked/highlighted text
+<nav> - Defines a set of navigation links
+<section> - Defines a section in a document
+<summary> - Defines a heading for the <details> element
+<time> Defines a date/time
+
+
+<body>
+  <header>
+
+    <nav></nav>
+
+  </header>
+
+<main>
+  
+    <section>
+
+    <article>
+
+    <section>
+       
+    </section>
+
+    <section>
+
+     <aside>
+
+         <details>
+
+             <summary>    
+         
+             </summary>
+  
+         </details>
+    
+     </aside>
+    
+    </section>
+    
+    </article>
+
+    </section>
+
+</main>
+
+<footer>
+
+</footer>
+
+</body>

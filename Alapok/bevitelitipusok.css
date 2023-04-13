@@ -1,0 +1,7 @@
+#ervenytelen:invalid {
+  background-color: red;
+}
+
+#ervenytelen:valid {
+  background-color: lightgreen;
+}

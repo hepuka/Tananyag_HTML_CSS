@@ -1,0 +1,180 @@
+* {
+  font-family: Arial, "Times New Roman", sans-serif;
+  font-size: 17px;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+#elsőcímsor {
+  background-color: cornflowerblue;
+}
+
+.másodikcímsor {
+  background-color: darkcyan;
+}
+
+table {
+  border: 5px solid rgb(146, 41, 41);
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td,
+th {
+  text-align: center;
+  border: 1px solid rgb(190, 190, 190);
+  padding: 8px; /*a szöveg és a border közötti távolság*/
+}
+
+/* pszeudo elemekkel*/
+a:link {
+  text-decoration: none; /*a link alól kiveszi a vonalat*/
+}
+
+a {
+  transition: 1s;
+}
+
+a:link {
+  color: rgb(199, 73, 199);
+}
+
+a:hover {
+  color: blueviolet;
+}
+
+td:hover {
+  background-color: yellow;
+}
+
+/* A szülőelem (ul vagy az ol) első gyermekelemére érvényes*/
+li:first-child {
+  background-color: blue;
+}
+/* A szülőelem (ul vagy az ol) utolsó gyermekelemére érvényes*/
+li:last-child {
+  background-color: red;
+}
+
+/*a p elem elé és után berak egy *-ot*/
+p::before {
+  content: "*";
+}
+
+p::after {
+  content: "*";
+}
+
+/*a p elem első sorára vonatkozik*/
+p::first-line {
+  background-color: rgb(201, 188, 188);
+}
+
+/*a p elem első betűjére vonatkozik*/
+p::first-letter {
+  font-size: 40px;
+}
+
+/*ha kijelölünk egy részt egérrel a p elemben, akkor ezt a stílust kapjuk*/
+p::selection {
+  background-color: blueviolet;
+  color: white;
+}
+
+/* A szülőelem (oszlopnév) n-edik gyermekelemére érvényes*/
+tr:nth-child(even) {
+  /* minden páros sorra vonatkozik*/
+  background-color: #eee;
+}
+
+/*azon sor eleme amelyben scope col attribútum van */
+th[scope="col"] {
+  background-color: #696969;
+  color: #fff;
+}
+
+/*azon sor eleme amelyben scope row attribútum van */
+
+td[scope="row"] {
+  background-color: #d7d9f2;
+}
+
+#linear {
+  background: linear-gradient(to right, black, white);
+}
+
+.boxshadow {
+  background: rgb(80, 230, 205);
+  width: 50%;
+  box-shadow: black 10px 5px 15px;
+  padding: 15px;
+}
+
+#kép1 {
+  float: left;
+  box-shadow: black 10px 5px 15px;
+  margin: 5px;
+}
+
+#kép2 {
+  float: left;
+  box-shadow: black 10px 5px 15px;
+  margin: 5px;
+}
+
+/* Arribute selectors*/
+
+[href] {
+  color: greenyellow;
+}
+/*kiválasztom az attribútumot és az értékének adom meg a sílusát*/
+[target="blank"] {
+  color: chocolate;
+}
+
+[class="leírás"] {
+  color: rgb(25, 199, 199);
+}
+
+/* leszármazott selector*/
+/*az adott div-ben lévő összes p-re érvényes*/
+div p {
+  color: red;
+}
+
+/* child selector*/
+/*az adott div közvetlen leszármazott p-ére érvényes*/
+div > p {
+  color: yellow;
+}
+
+/*Az adott elemmel azonos szinten lévő elemekre vonatkozik*/
+/*A div utáni szomszédos testvér elemre vonatkozik*/
+div + p {
+  color: cadetblue;
+}
+
+/*Általános testvér selector*/
+/*A div utáni összes testvér elemre vonatkozik*/
+
+div ~ p {
+  color: purple;
+}
+
+/*ha a weblap monitoron jelenik meg*/
+@media screen and (max-width: 1000px) {
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13pt;
+  }
+}
+
+/*ha a weblapot nyomtatjuk*/
+@media print {
+  body {
+    font-family: sans-serif;
+    font-size: 10pt;
+  }
+}

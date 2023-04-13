@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <a href="./home.html">Home</a>
+    <p><strong>This text is important!</strong></p>
+  
+  <img src="https://www.telekom.hu/shop/static-tkws-media/sku/LENOVO_YOGA_C940_81Q9008GHV/ProductPictures/ProductPictures01/LENOVO_YOGA_C940_81Q9008GHV_01_400.png" alt="csak egy leírás, hogy mit is tartalmaz a link" width="200" height="200">
+  
+  <h2 title="Ez egy header">Header</h2>
+<p title="ez egy paragrafus">paragraph</p>
+  
+  <p>Do not forget to buy <mark>milk</mark> today.</p>
+  
+  <p>My favorite color is <del>blue</del> red.</p>
+  
+  <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+  
+  <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+  
+  <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+  <hr>
+  
+  <p>The HTML address element defines contact information (author/owner) of a document or article.</p>
+  <address>
+  Written by John Doe.<br> 
+  Visit us at:<br>
+  Example.com<br>
+  Box 564, Disneyland<br>
+  USA
+  </address>
+  <hr>
+  
+  <p>The HTML cite element defines the title of a work.</p>
+  <p>Browsers usually display cite elements in italic.</p>
+  <img src="img_the_scream.jpg" width="220" height="277" alt="The Scream">
+  <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+  <hr>
+  
+  <a href="mailto:someone@example.com">Send email</a><br>
+  <hr>
+  
+  <p>The title attribute specifies extra information about an element. The information is most often shown as a tooltip text when the       mouse moves over the element.</p>
+  <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+  <hr> 
+  
+  <p><a href="#C4" title="Az link egy adott könyvjelzőre ugrik">Jump to Chapter 4</a></p>
+  <h2 id="C4">Chapter 4</h2>
+  <p>This chapter explains ba bla bla</p>
+  <hr>
+  
+  <p title="A kép egyes részei más oldalra navigálnak">Click on the computer, the phone, or the cup of coffee to go to a new page</p>
+  <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+  <map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+  </map>
+  <hr>
+  
+  <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+  <map name="workmap">
+  <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+  </map>
+  <script>
+  function myFunction() {
+  alert("You clicked the coffee cup!");
+  }
+  </script>
+  <hr>
+
+  <picture>
+    <source media="(min-width: 650px)" srcset="img_food.jpg">
+    <source media="(min-width: 465px)" srcset="img_car.jpg">
+    <img src="img_girl.jpg" style="width:auto;">
+  </picture><br>
+
+  <picture>
+    <source srcset="img_avatar.png">
+    <source srcset="img_girl.jpg">
+    <img src="img_beatles.gif" alt="Beatles" style="width:auto;">
+  </picture>
+  <hr>
+
+
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML_alapok</title>
+    <link rel="stylesheet" href="html_alapok.css" />
+  </head>
+  <body>
+    <a href="./home.html">Home</a>
+    <h2 id="elsőcímsor">Címsor 1.</h2>
+    <h2 class="másodikcímsor">Címsor 2.</h2>
+    <h2>Címsor 3.</h2>
+    <hr />
+
+    <p id="para1">
+      Paragrafus 1. <b>Lorem</b> ipsum
+      <i>dolor sit amet consectetur</i> adipisicing elit. Dolores officia
+      veritatis sit amet reprehenderit. Consectetur quibusdam, illo minus rem in
+      modi eligendi blanditiis quod recusandae quia atque at distinctio eaque.
+    </p>
+
+    <hr />
+
+    <h3>Hiperhivatkozások</h3>
+    <a href="./aloldal1.html" target="blank">Aloldal megnyitása új lapon</a>
+    <br />
+    <a href="./aloldal1.html">Aloldal megnyitása ugyanabban az ablakban</a>
+    <br />
+    <a href="#táblázat">Ugrás az oldal egyik részre</a>
+    <br />
+    <a href="http://google.hu" target="blank">Ugrás a google.hu-ra</a><br />
+    <hr />
+
+    <h3>CSS Combinators</h3>
+
+    <h1>Ez egy h1 elem</h1>
+    <p>Ez egy p tag a div előtt</p>
+    <div>
+      <p>p1 tag a div-ben</p>
+      <p>p2 tag a div-ben</p>
+      <section>
+        <p>p1 tag a div/section-ben</p>
+      </section>
+      <p>p3 tag a div-ben</p>
+    </div>
+    <p>p1 tag a div után</p>
+    <p>p2 tag a div után</p>
+
+    <hr />
+
+    <h3>Rendezetlen lista</h3>
+    <ul>
+      <li>só</li>
+      <li>bors</li>
+      <li>paprika</li>
+      <li>köménymag</li>
+    </ul>
+
+    <h3>Rendezett lista</h3>
+    <ol>
+      <li>Katika</li>
+      <li>Zolika</li>
+      <li>Pankácska</li>
+      <li>Petike</li>
+    </ol>
+
+    <h3>Leíró lista</h3>
+
+    <!-- dl -> dt -> dd -->
+
+    <dl>
+      <dt>Kézilabda</dt>
+      <dd class="leírás">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit eaque
+        delectus animi ipsum libero commodi voluptate magnam officiis blanditiis
+        cumque. Repellat vel consequatur corporis quo quisquam. Provident minima
+        praesentium eaque!
+      </dd>
+
+      <dt>Labdarúgás</dt>
+      <dd class="leírás">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+        fugiat impedit nam unde architecto totam explicabo ex, quia consectetur
+        neque, inventore cum dolorum quo mollitia consequuntur accusantium!
+        Obcaecati, sunt expedita.
+      </dd>
+
+      <dt>Kosárlabda</dt>
+      <dd class="leírás">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quae,
+        illum cumque aliquid maxime corporis veritatis laudantium exercitationem
+        assumenda atque quasi, eligendi soluta eaque, quos iure natus sequi fuga
+        rem!
+      </dd>
+    </dl>
+    <hr />
+
+    <h3>Táblázat</h3>
+
+    <table id="táblázat">
+      <tr>
+        <th scope="col">Név</th>
+        <th scope="col">1.adat</th>
+        <th scope="col">2.adat</th>
+        <th scope="col">Összesen</th>
+      </tr>
+      <tr>
+        <td scope="row">Katika</td>
+        <td rowspan="4">100</td>
+        <td>101</td>
+        <td>201</td>
+      </tr>
+      <tr>
+        <td scope="row">Zolika</td>
+        <td>101</td>
+        <td>201</td>
+      </tr>
+      <tr>
+        <td scope="row">Pankácska</td>
+        <td>101</td>
+        <td>201</td>
+      </tr>
+      <tr>
+        <td scope="row">Petike</td>
+        <td>101</td>
+        <td>201</td>
+      </tr>
+    </table>
+    <hr />
+
+    <h2>A border-radius tesztelése</h2>
+    <fieldset>
+      <legend>A CSS3 border-radius funkciójának tesztelése</legend>
+      <label>
+        Vezetéknév
+        <input type="text" name="vezetéknév" /> </label
+      ><br />
+      <label>
+        Keresztnév
+        <input type="text" name="keresztnév" /> </label
+      ><br /><br />
+      <label>
+        Írd le a történeted<br />
+        <textarea
+          name="történet"
+          cols="40"
+          rows="8"
+          style="border-radius: 10px"
+        ></textarea></label
+      ><br />
+      <input type="submit" name="Történet elküldése" />
+    </fieldset>
+    <hr />
+
+    <h2>A linear-gradient tulajdonság tesztelése</h2>
+    <p id="linear"><br /><br /><br /></p>
+    <hr />
+
+    <h2>A box-shadow tulajdonság tesztelése</h2>
+    <div class="boxshadow">Ez egy div szakasz, amelynek mezőárnyéka van</div>
+    <hr />
+
+    <section>
+      <img
+        id="kép1"
+        src="../alapok/img/kép1.jpg"
+        alt="kép1"
+        width="200"
+        height="200"
+      />
+      <img
+        id="kép2"
+        src="../alapok/img/kép1.jpg"
+        alt="kép2"
+        width="200"
+        height="200"
+      />
+    </section>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <hr />
+
+    <h2>Kép hivatkozásként</h2>
+    <a href="./aloldal1.html">
+      <img
+        id="kép1"
+        src="../alapok/img/kép1.jpg"
+        alt="kép1"
+        width="200"
+        height="200"
+      />
+    </a>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <hr />
+
+    <h2>Képtérkép</h2>
+
+    <!--
+If the CSS width property is set to 100%, the image will be responsive and scale up and down
+ <img src="img_girl.jpg" style="width:100%;"> 
+
+
+If the max-width property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:
+ <img src="img_girl.jpg" style="max-width:100%;height:auto;">
+
+-->
+    <img
+      src="https://images.unsplash.com/photo-1676818858676-6a8c7d8ec939?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+      alt="képtérkép" usemap="#workmap" width="400" height="200" 
+    <map name="workmap">
+      <area
+        shape="rect"
+        coords="34,44,270,350"
+        alt="Computer"
+        href="computer.html"
+      />
+      <area
+        shape="rect"
+        coords="290,172,333,250"
+        alt="Phone"
+        href="phone.html"
+      />
+      <area
+        shape="circle"
+        coords="337,300,44"
+        alt="Cup of coffee"
+        href="coffee.html"
+      />
+      <figcaption>Flower pics</figcaption>
+    </map>
+    <hr />
+
+
+    <h2>LINKS</h2>
+    <h2>Internal link</h2>
+    <a href="#"></a>
+
+    <h2>External link</h2>
+    <a href="   http://www.wikipedia.org/" target="_blank"></a>
+
+    <br /><br />
+    <a>
+      <img
+        src="golden-gate-sm.jpg"
+        alt="the golden gate bridge"
+        width="500"
+        height="213"
+      />
+    </a>
+
+    <a href="mailto:">Email to me</a>
+
+    <h1>Navigation Links</h1>
+    <ul>
+      <!-- az adott oldalon a section_1 id névvel ellátott részhez ugrik -->
+      <li><a href="#section_1">Link 1</a></li>
+
+      <li><a href="/main.html"></a></li>
+      <li>Link 3</li>
+    </ul>
+
+
+  </body>
+</html>
