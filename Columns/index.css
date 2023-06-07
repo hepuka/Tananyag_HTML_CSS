@@ -1,5 +1,7 @@
 body {
   font-size: 1.5rem;
+  background-color: #2a2438;
+  color: #dbd8e3;
 }
 
 .columns {
@@ -36,7 +38,7 @@ p {
   margin-top: 2rem;
   font-size: 3rem;
   text-align: center;
-  color: #333;
+  color: #d48d99;
   column-span: all;
 }
 

@@ -1,141 +1,116 @@
-
 * {
-
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body{
-
-    margin: 0;
-    background: url(./images/bg.jpg) fixed;
-    background-size: cover;
-
-   
+body {
+  margin: 0;
+  background: url(./images/bg.jpg) fixed;
+  background-size: cover;
 }
 
-.grid1{
-
-    max-width: 1000px;
-    margin: 40px auto;
-    display: grid;
-    grid-template-columns: repeat(12,1fr); /*frection, ami a rendelkezésre álló területet adja meg.
+.grid1 {
+  max-width: 1440px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(
+    12,
+    1fr
+  ); /*frection, ami a rendelkezésre álló területet adja meg.
                                             ez esetben 12 db 1fr-t hoz létre*/
-    /*  grid-row-gap: 10px;
+  /*  grid-row-gap: 10px;
     grid-column-gap: 10px;*/
-    grid-gap: 10px; /*grid-row-gap és a grid-column-gap shorthand megadása*/
-
+  grid-gap: 10px; /*grid-row-gap és a grid-column-gap shorthand megadása*/
 }
 
-.col{
-
-    background: white;
-    padding: 10px;
+.col {
+  background: white;
+  padding: 10px;
 }
 
-.grid1 .col-6{
-
-    /*ezzel 6 db 1fr-es cellát vonunk össze a divvel*/
-   /* grid-column-start: 1;
+.grid1 .col-6 {
+  /*ezzel 6 db 1fr-es cellát vonunk össze a divvel*/
+  /* grid-column-start: 1;
     grid-column-end: 7;*/
 
-    grid-column: span 6; /*grid-column: 1/7 a grid-column-start és a frid-column-end shorthand-e.
+  grid-column: span 6; /*grid-column: 1/7 a grid-column-start és a frid-column-end shorthand-e.
 
     de ha időközben beszúrunk sorokat vagy oszlopokat akkor az 1/7 megadás már nem lesz jó, 
     így a span-el kell megadni, hogy hány oszlopot akarunk összevonni
     */
 }
 
-.grid1 .col-2{
-
-    grid-column: span 2;
+.grid1 .col-2 {
+  grid-column: span 2;
 }
 
-.grid1 .col-3{
-
-    grid-column: span 3;
+.grid1 .col-3 {
+  grid-column: span 3;
 }
 
-.grid1 .col-4{
-
-    grid-column: span 4; 
+.grid1 .col-4 {
+  grid-column: span 4;
 }
 
-.grid1 .col-12{
-
-    grid-column: span 12;
+.grid1 .col-12 {
+  grid-column: span 12;
 }
 
-.grid2{
-
-    max-width: 1000px;
-    margin: 40px auto;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 10px;
-    grid-template-areas: 
+.grid2 {
+  max-width: 1440px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-template-areas: 
 
     /*mivel 4db 1fr-es oszlopot hoztam létre így a header elfoglalja az egész első sort
     a második sorban 2db main lesz, üres hely és egy sidebar
     a 3. sort elfoglalja teljes egészében a footer*/
-        "header header header header"
-        "main main . sidebar"
-        "footer footer footer footer"
-    ;
-
+    "header header header header"
+    "sidebar . main main"
+    "footer footer footer footer";
 }
 
-.grid2 .header{
-
-    grid-area: header;
+.grid2 .header {
+  grid-area: header;
 }
 
-.grid2 .main{
-
-    grid-area: main;
+.grid2 .main {
+  grid-area: main;
 }
 
-.grid2 .sidebar{
-
-    grid-area: sidebar;
+.grid2 .sidebar {
+  grid-area: sidebar;
 }
 
-.grid2 .footer{
-
-    grid-area: footer;
+.grid2 .footer {
+  grid-area: footer;
 }
 
-.grid3{
-
-    max-width: 1000px;
-    margin: 40px auto;
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-gap: 10px;
-
-
+.grid3 {
+  max-width: 1440px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
 }
-.grid3 .col-1{
-
-    grid-column-start: 1;
-    grid-column-end: 3;
+.grid3 .col-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
-.grid3 .col-2{
-
-    grid-column-start: 3;
-    grid-column-end: 6;
+.grid3 .col-2 {
+  grid-column-start: 3;
+  grid-column-end: 6;
 }
 
 /*itt már sorokat és oszlopokat is összevonunk*/
-.grid3 .col-3{
-
-
-    /*grid-column-start: 1;
+.grid3 .col-3 {
+  /*grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 4;*/
 
-   /*előző 4 sor shorthand-e*/
-    grid-area: 2/1/4/3;
-
+  /*előző 4 sor shorthand-e*/
+  grid-area: 2/1/4/3;
 }
