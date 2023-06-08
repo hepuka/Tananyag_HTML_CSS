@@ -45,6 +45,14 @@ a:hover {
   color: blueviolet;
 }
 
+a:visited {
+  color: yellow;
+}
+
+a:active {
+  color: blue;
+}
+
 td:hover {
   background-color: yellow;
 }
