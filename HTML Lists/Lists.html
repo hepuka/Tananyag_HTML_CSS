@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lists</title>
+  </head>
+  <body>
+    <h2>Unordered list</h2>
+    <ul>
+      <li>Google Chrome</li>
+      <li>Microsoft Edge</li>
+      <li>Firefox</li>
+      <li>Opera</li>
+      <li>Internet Explorer</li>
+    </ul>
+
+    <i
+      >mivel undordered list-et használunk, így nincs jelentősége a start
+      attribútumnak az ul részben. Viszont az ol részben már igen, mivel ott már
+      ordered list-et használunk</i
+    >
+    <ul>
+      <li start="5">Test</li>
+      <li>Item</li>
+      <li>
+        Item
+        <ol start="4">
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+        </ol>
+      </li>
+    </ul>
+
+    <h2>Ordered list</h2>
+    <ol>
+      <li>Google Chrome</li>
+      <li>Microsoft Edge</li>
+      <li>Firefox</li>
+      <li>Opera</li>
+      <li>Internet Explorer</li>
+    </ol>
+
+    <h2>Lowercase Latin letters</h2>
+    <ol type="a">
+      <li>Google Chrome</li>
+      <li>Microsoft Edge</li>
+      <li>Firefox</li>
+      <li>Opera</li>
+      <li>Internet Explorer</li>
+    </ol>
+
+    <h2>Capital Latin letters</h2>
+    <ol type="A">
+      <li>Google Chrome</li>
+      <li>Microsoft Edge</li>
+      <li>Firefox</li>
+      <li>Opera</li>
+      <li>Internet Explorer</li>
+    </ol>
+
+    <h2>Lowercase Roman numerals</h2>
+    <ol type="i">
+      <li>Google Chrome</li>
+      <li>Microsoft Edge</li>
+      <li>Firefox</li>
+      <li>Opera</li>
+      <li>Internet Explorer</li>
+    </ol>
+
+    <h2>Uppercase Roman numerals</h2>
+    <ol type="I">
+      <li>Google Chrome</li>
+      <li>Microsoft Edge</li>
+      <li>Firefox</li>
+      <li>Opera</li>
+      <li>Internet Explorer</li>
+    </ol>
+
+    <h2>start attribute</h2>
+    <ol start="5">
+      <li>Google Chrome</li>
+      <li>Microsoft Edge</li>
+      <li>Firefox</li>
+      <li>Opera</li>
+      <li>Internet Explorer</li>
+    </ol>
+
+    <i>
+      mivel a start="4" az li-be van rakva és nem az ol-be, így sima ordered
+      list-et kapunk</i
+    >
+    <p>1.pld.</p>
+    <ol>
+      <li start="4">Item</li>
+      <li>Test</li>
+      <li>
+        Item
+        <ol start="4">
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+        </ol>
+      </li>
+    </ol>
+
+    <p>2.pld.</p>
+    <ol>
+      <li start="4">Item</li>
+      <li>Item</li>
+      <li>
+        Item
+        <ol start="4">
+          <li>Item</li>
+          <li>Test</li>
+          <li>Item</li>
+        </ol>
+      </li>
+    </ol>
+
+    <p>3.pld.</p>
+    <ol>
+      <li start="4">Test</li>
+      <li>Item</li>
+      <li>
+        Item
+        <ol start="4">
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+        </ol>
+      </li>
+    </ol>
+    <h2>reverse attribute</h2>
+    <ol reversed>
+      <li>Google Chrome</li>
+      <li>Microsoft Edge</li>
+      <li>Firefox</li>
+      <li>Opera</li>
+      <li>Internet Explorer</li>
+    </ol>
+
+    <!-- ha a value="8"-at az ol-be rakom akkor sima ordered list-et kapunk -->
+    <h2>value attribute</h2>
+    <ol>
+      <li>Google Chrome</li>
+      <li>Microsoft Edge</li>
+      <li value="8">Firefox</li>
+      <li>Opera</li>
+      <li>Internet Explorer</li>
+    </ol>
+
+    <h2>Description List</h2>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Hypertext Markup Language</dd>
+      <dt>CSS</dt>
+      <dd>Cascading Style Sheet</dd>
+    </dl>
+
+    <h2>Nested Lists</h2>
+    <ol>
+      <li>
+        HTML
+        <ul>
+          <li>Tags</li>
+          <li>Attributes</li>
+        </ul>
+      </li>
+      <li>CSS</li>
+      <li>
+        JavaScript
+        <ul>
+          <li>Array</li>
+          <li>Function</li>
+          <li>Object</li>
+        </ul>
+      </li>
+    </ol>
+  </body>
+</html>
