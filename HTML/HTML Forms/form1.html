@@ -109,6 +109,46 @@
     </div>
 
     <div>
+      <h2>Buttons</h2>
+
+      <div>
+        <input type="submit" value="Submit" />
+        <button type="submit">Submit</button>
+      </div>
+      <br />
+      <div>
+        <input type="reset" value="Reset" />
+        <button type="reset">Reset</button>
+      </div>
+      <br />
+      <div>
+        <input type="button" value="Next" />
+        <button type="button">Next</button>
+      </div>
+      <br />
+      <div>
+        <input type="image" src="./submit.png" alt="Submit Button" />
+        <button type="submit">
+          <img src="./submit.png" alt="Submit Button" />
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <h2>Data Validation</h2>
+      <input type="text" name="user-name" required />
+      <input type="password" name="password" pattern="^[a-zA-Z0-9]{8,}$" />
+      <input type="text" name="login" value="john.doe.2020" readonly />
+      <input type="email" name="email" value="john.doe@mail.com" />
+      <input type="number" name="product-count" min="3" max="6" value="3" />
+      <input
+        type="password"
+        name="password"
+        minlength="8"
+        placeholder="min length = 8"
+      />
+    </div>
+    <div>
       <h2>További beviteli típusok</h2>
       <fieldset id="mezőkészlet">
         <legend>Beviteli mező típusok</legend>
@@ -281,22 +321,6 @@
           </label>
         </fieldset>
         <br />
-
-        <div>
-          <label for="ice-cream-choice">Choose a flavor:</label>
-          <input
-            list="ice-cream-flavors"
-            id="ice-cream-choice"
-            name="ice-cream-choice"
-          />
-          <datalist id="ice-cream-flavors">
-            <option value="Chocolate"></option>
-            <option value="Coconut"></option>
-            <option value="Mint"></option>
-            <option value="Strawberry"></option>
-            <option value="Vanilla"></option>
-          </datalist>
-        </div>
 
         <h2>Érvénytelen adatok vizsgálata</h2>
         <fieldset>
