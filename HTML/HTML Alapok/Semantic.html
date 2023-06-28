@@ -51,6 +51,7 @@
     </header>
 
     <main>
+      <!-- you can find HTML pages with <section> elements containing <article> elements, and <article> elements containing <section> elements. -->
       <article>
         <section class="section" aria-labelledby="html_and_accessibility">
           <!-- The <header> element is used as the section header: -->
@@ -195,7 +196,30 @@
               </p>
             </div>
           </section>
+          <h3>Other Semantic elements</h3>
+          <div>
+            <p>details element</p>
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details -->
+            <details>
+              <summary>Details element as a Semantic tag</summary>
+              Something small enough to escape casual notice.
+            </details>
+          </div>
+          --------------
+          <div>
+            <p>figure, figcaption element</p>
+            <figure>
+              <img src="img/kép1.jpg" alt="Trulli" />
+              <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
+            </figure>
+          </div>
+          -------------------
+          <p>mark element</p>
+          <div>
+            <p>Do not forget to buy <mark>milk</mark> today.</p>
+          </div>
 
+          -------------------
           <section class="section" aria-labelledby="page_layouts">
             <h4>
               <a href="#page_layouts" title="Permalink to Page layouts"
@@ -263,6 +287,7 @@
             </div>
           </section>
         </section>
+        <section></section>
       </article>
     </main>
     <aside>
