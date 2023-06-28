@@ -15,7 +15,6 @@
     </div>
 
     <h2>The map and area elements</h2>
-
     <p>
       Click on the computer, the phone, or the cup of coffee to go to a new page
       and read more about the topic:
@@ -28,6 +27,14 @@
       width="400"
       height="379"
     />
+
+    <!-- the coordinates 34,44 is located 34 pixels from the left margin and 44 pixels from the top: -->
+    <!-- https://www.w3schools.com/html/html_images_imagemap.asp -->
+
+    <!-- use the onclick attribute to execute a JS function when the area is clicked:
+<map name="workmap">
+  <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+</map> -->
 
     <map name="workmap">
       <area
@@ -42,6 +49,8 @@
         alt="Phone"
         href="phone.htm"
       />
+      <!-- coordinates of the center of the circle:337,300 -->
+      <!-- radius of the circle:44 -->
       <area
         shape="circle"
         coords="337,300,44"
@@ -52,6 +61,7 @@
 
     <h2>Images</h2>
     <div id="picture">
+      <!-- https://www.w3schools.com/tags/tag_picture.asp -->
       <picture>
         <source media="(max-width: 480px)" srcset="img/pic1.jpg" />
         <source media="(max-width: 780px)" srcset="img/pic2.jpg" />
@@ -70,12 +80,26 @@
       <figcaption>This is an image</figcaption>
     </figure>
 
-    <a
-      href="https://loremipsum.io/21-of-the-best-placeholder-image-generators/"
-      target="_blank"
-    >
-      képgenerátor
-    </a>
+    <div>
+      <a
+        href="https://loremipsum.io/21-of-the-best-placeholder-image-generators/"
+        target="_blank"
+      >
+        képgenerátor
+      </a>
+    </div>
+
+    <div>
+      <p>Picture as a link:</p>
+      <a href="https://www.w3schools.com/html/html_images.asp" target="_blank">
+        <img
+          src="img/pic1.jpg"
+          alt="HTML5 favicon image"
+          width="100"
+          height="100"
+        />
+      </a>
+    </div>
 
     <h2>Absolute URLs</h2>
     <p><a href="https://www.w3.org/">W3C</a></p>

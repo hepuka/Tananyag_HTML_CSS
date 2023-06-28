@@ -1,4 +1,3 @@
-
 <!-- INPUT TYPES
 	
 <input type="text"> 	Displays a single-line text input field
@@ -53,14 +52,12 @@
   <head>
     <meta charset="utf-8" lang="en" />
     <title>A HTML5 beviteli típusai</title>
-    <link rel="stylesheet" href="./bevitelitipusok.css">
+    <link rel="stylesheet" href="./bevitelitipusok.css" />
   </head>
 
   <body>
-
     <a href="./home.html">Home</a>
     <h1>A HTML5 beviteli típusai</h1>
-
 
     <fieldset id="mezőkészlet">
       <legend>Beviteli mező típusok</legend>
@@ -167,69 +164,84 @@
 
       <h2>Egy HTML5-űrlap, amely mezőkészletet használ</h2>
       <fieldset>
-      <legend>Add meg a neved</legend>
-      <label>
-      Vezetéknév
-      <input type="text" name="vezetéknév" required="required">
-      </label>
-
-      <label>
-      Keresztnév
-      <input type="text" name="keresztnév" required="required">
-      </label>
-
-      <label>
-        <button type="submit" >Elküld</button>
+        <legend>Add meg a neved</legend>
+        <label>
+          Vezetéknév
+          <input type="text" name="vezetéknév" required="required" />
         </label>
-       </fieldset>
 
+        <label>
+          Keresztnév
+          <input type="text" name="keresztnév" required="required" />
+        </label>
 
+        <label>
+          <button type="submit">Elküld</button>
+        </label>
+      </fieldset>
 
-
-      <br>
+      <br />
       <h2>A select beviteli típus tesztelése</h2>
 
       <h2>Dropdown menu</h2>
 
       <fieldset>
-      <legend>Válaszd ki a kedvenc sportodat</legend>
-      <select name="sport">
-      <option value="kézilabda">Kézilabda</option>
-      <option value="kosárlabda">Kosárlabda</option>
-      <option value="foci">Foci</option>
-      <option value="jégkorong">Jégkorong</option>
-      </select>
+        <legend>Válaszd ki a kedvenc sportodat</legend>
+        <select name="sport">
+          <option value="kézilabda">Kézilabda</option>
+          <option value="kosárlabda">Kosárlabda</option>
+          <option value="foci">Foci</option>
+          <option value="jégkorong">Jégkorong</option>
+        </select>
       </fieldset>
-      <br><br>
+      <br /><br />
 
       <h2>Adatlista-funkciójának tesztelése</h2>
       <fieldset>
-      <legend>Válaszd ki a megfelelő sportot</legend>
-      <label>
-      <input list="sport" placeholder="Kiválaszt">
-      <datalist id="sport">
-      <option value="Kézilabda">
-      <option value="Kosárlabda">
-      <option value="Foci">
-      <option value="Jégkorong">
-      </datalist>
+        <legend>Válaszd ki a megfelelő sportot</legend>
+        <label>
+          <input list="sport" placeholder="Kiválaszt" />
+          <datalist id="sport">
+            <option value="Kézilabda"></option>
+            <option value="Kosárlabda"></option>
+            <option value="Foci"></option>
+            <option value="Jégkorong"></option>
+          </datalist>
+        </label>
       </fieldset>
-      </label>
-      <br>
+      <br />
+
+      <div>
+        <label for="ice-cream-choice">Choose a flavor:</label>
+        <input
+          list="ice-cream-flavors"
+          id="ice-cream-choice"
+          name="ice-cream-choice"
+        />
+        <datalist id="ice-cream-flavors">
+          <option value="Chocolate"></option>
+          <option value="Coconut"></option>
+          <option value="Mint"></option>
+          <option value="Strawberry"></option>
+          <option value="Vanilla"></option>
+        </datalist>
+      </div>
 
       <h2>Érvénytelen adatok vizsgálata</h2>
       <fieldset>
-      <legend>18 évesnél idősebbnek kell lenned a részvételhez</legend>
-      <label>
-      Életkor:
-      <input id="ervenytelen" type="number" name="kor" min="18" placeholder="0-100">
-      </label>
+        <legend>18 évesnél idősebbnek kell lenned a részvételhez</legend>
+        <label>
+          Életkor:
+          <input
+            id="ervenytelen"
+            type="number"
+            name="kor"
+            min="18"
+            placeholder="0-100"
+          />
+        </label>
       </fieldset>
-      <br>
-
-
-
-
+      <br />
     </fieldset>
   </body>
 </html>
