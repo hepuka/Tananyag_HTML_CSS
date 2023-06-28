@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <!-- label for és input id,name kell ugyannak lenni -->
+
+    <!-- 
+        vagy label-be kell lenni az inputnak, ekkor a label-nek nem kell attribútum
+        
+      <label>
+        Próba
+        <input type="text" name="valami" id="valami" />
+      </label> 
+    -->
+
+    <div>
+      <h2>
+        Ha nincs hely a label-nek, akkor az input placeholder attr. használata
+      </h2>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="8-Character Password"
+      />
+    </div>
+
+    <div>
+      <h2>Datalist</h2>
+
+      <label for="ice-cream-choice">Choose a flavor:</label>
+      <input
+        list="ice-cream-flavors"
+        id="ice-cream-choice"
+        name="ice-cream-choice"
+      />
+
+      <datalist id="ice-cream-flavors">
+        <option value="Chocolate"></option>
+        <option value="Coconut"></option>
+        <option value="Mint"></option>
+        <option value="Strawberry"></option>
+        <option value="Vanilla"></option>
+      </datalist>
+    </div>
+
+    <div>
+      <h2>General form</h2>
+      <form action="" method="get" class="form-example" autocomplete="off">
+        <div class="form-example">
+          <label for="name">Enter your name: </label>
+          <input type="text" name="name" id="name" required />
+        </div>
+        <div class="form-example">
+          <label for="email">Enter your email: </label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div class="form-example">
+          <input type="submit" value="Subscribe!" />
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <h2>Radio button</h2>
+      <input type="radio" id="pay-master-card" name="pay" />
+      <label for="pay-master-card">Master Card</label> <br />
+      <input type="radio" id="pay-visa" name="pay" checked />
+      <label for="pay-visa">Visa</label>
+    </div>
+
+    <div>
+      <h2>checkbox button</h2>
+      <p>
+        <input type="checkbox" id="swimming" name="swimming" />
+        <label for="swimming">Swimming</label> <br />
+        <input type="checkbox" id="running" name="running" checked />
+        <label for="running">Running</label> <br />
+        <input type="checkbox" id="surfing" name="surfing" checked />
+        <label for="surfing">Surfing</label>
+      </p>
+    </div>
+
+    <div>
+      <h2>Dropdown Lists</h2>
+      <label for="clothes-size">Choose your size:</label>
+      <select name="clothes-size" id="clothes-size">
+        <option value="size-S">S</option>
+        <option value="size-M" selected>M</option>
+        <option value="size-L">L</option>
+        <option value="size-XL" disabled>XL</option>
+      </select>
+    </div>
+
+    <div>
+      <h2>Textarea</h2>
+      <div>
+        <textarea name="feedback" id="feedback" cols="30" rows="5"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="Send" />
+        <input type="reset" value="Cancel" />
+      </div>
+    </div>
+
+    <div>
+      <h2>További beviteli típusok</h2>
+      <fieldset id="mezőkészlet">
+        <legend>Beviteli mező típusok</legend>
+
+        <label for="user-name">
+          Szövegbevitel
+          <input
+            type="text"
+            id="user-name"
+            name="user-name"
+            minlength="1"
+            maxlength="30"
+            size="20"
+          /> </label
+        ><br />
+        <br />
+
+        <label>
+          Számválasztó
+          <input
+            type="number"
+            id="sport-count"
+            name="sport-count"
+            step="0.1"
+            value="1.0"
+          /> </label
+        ><br />
+        <br />
+
+        <label>
+          E-mail-cím
+          <input type="email" id="user-email" name="user-email" /> </label
+        ><br />
+        <br />
+
+        <label>
+          Jelszóbevitel
+          <input type="password" id="password" name="name-password" /> </label
+        ><br />
+        <br />
+
+        <label>
+          Színválasztók
+          <input
+            type="color"
+            id="id-colour"
+            name="colour"
+            value="#FF00FF"
+          /> </label
+        ><br />
+        <br />
+
+        <label>
+          Dátumválasztó
+          <input type="date" id="date-change " name="date" /> </label
+        ><br />
+        <br />
+
+        <label>
+          Dátum- és időválasztó
+          <input type="datetime" name="dátumésidőteszt" /> </label
+        ><br />
+        <br />
+
+        <label>
+          Helyi dátum- és időválasztó
+          <input type="datetime-local" name="helyidátumésidőteszt" /> </label
+        ><br />
+        <br />
+
+        <label>
+          Hónapválasztó
+          <input type="month" name="hónapteszt" /> </label
+        ><br />
+        <br />
+
+        <label>
+          Fájlfeltöltés
+          <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/png, image/jpeg"
+          /> </label
+        ><br />
+        <br />
+
+        <label>
+          Tartományválasztó
+          <input type="range" min="0" max="20" name="tartományteszt" /> </label
+        ><br />
+        <br />
+        <label>
+          Kereső választó
+          <input type="search" name="keresőteszt" /> </label
+        ><br />
+        <br />
+        <label>
+          Telefonszám-választó
+          <input type="tel" name="telefonteszt" /> </label
+        ><br />
+        <br />
+        <label>
+          Időpontválasztó
+          <input type="time" name="időteszt" /> </label
+        ><br />
+        <br />
+        <label>
+          URL-választó
+          <input type="url" name="url-teszt" /> </label
+        ><br />
+        <br />
+        <label>
+          Hétválasztó
+          <input type="week" name="hétteszt" /> </label
+        ><br />
+        <br />
+
+        <label>
+          Rejtett mező
+          <input type="hidden" name="rejtett" value="1111" /> </label
+        ><br />
+        <br />
+
+        <h2>Egy HTML5-űrlap, amely mezőkészletet használ</h2>
+        <fieldset>
+          <legend>Add meg a neved</legend>
+          <label>
+            Vezetéknév
+            <input type="text" name="vezetéknév" required="required" />
+          </label>
+
+          <label>
+            Keresztnév
+            <input type="text" name="keresztnév" required="required" />
+          </label>
+
+          <label>
+            <button type="submit">Elküld</button>
+          </label>
+        </fieldset>
+
+        <br />
+        <h2>A select beviteli típus tesztelése</h2>
+
+        <h2>Dropdown menu</h2>
+
+        <fieldset>
+          <legend>Válaszd ki a kedvenc sportodat</legend>
+          <select name="sport">
+            <option value="kézilabda">Kézilabda</option>
+            <option value="kosárlabda">Kosárlabda</option>
+            <option value="foci">Foci</option>
+            <option value="jégkorong">Jégkorong</option>
+          </select>
+        </fieldset>
+        <br /><br />
+
+        <h2>Adatlista-funkciójának tesztelése</h2>
+        <fieldset>
+          <legend>Válaszd ki a megfelelő sportot</legend>
+          <label>
+            <input list="sport" placeholder="Kiválaszt" />
+            <datalist id="sport">
+              <option value="Kézilabda"></option>
+              <option value="Kosárlabda"></option>
+              <option value="Foci"></option>
+              <option value="Jégkorong"></option>
+            </datalist>
+          </label>
+        </fieldset>
+        <br />
+
+        <div>
+          <label for="ice-cream-choice">Choose a flavor:</label>
+          <input
+            list="ice-cream-flavors"
+            id="ice-cream-choice"
+            name="ice-cream-choice"
+          />
+          <datalist id="ice-cream-flavors">
+            <option value="Chocolate"></option>
+            <option value="Coconut"></option>
+            <option value="Mint"></option>
+            <option value="Strawberry"></option>
+            <option value="Vanilla"></option>
+          </datalist>
+        </div>
+
+        <h2>Érvénytelen adatok vizsgálata</h2>
+        <fieldset>
+          <legend>18 évesnél idősebbnek kell lenned a részvételhez</legend>
+          <label>
+            Életkor:
+            <input
+              id="ervenytelen"
+              type="number"
+              name="kor"
+              min="18"
+              placeholder="0-100"
+            />
+          </label>
+        </fieldset>
+        <br />
+      </fieldset>
+    </div>
+  </body>
+</html>
