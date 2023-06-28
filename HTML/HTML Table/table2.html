@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="table2.css" />
+    <title>Table</title>
+  </head>
+  <body>
+    <div>
+      <table>
+        <caption>
+          Personal Details
+        </caption>
+        <colgroup>
+          <col style="background-color: aqua; color: white" span="2" />
+          <col style="background-color: antiquewhite; color: white" />
+          <col style="background-color: blueviolet; color: white" />
+          <col style="background-color: chartreuse; color: white" span="2" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th colspan="2">Full Name</th>
+            <th>Age</th>
+            <th>Country</th>
+            <th>Hobbies</th>
+            <th>Income</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td rowspan="2">First Name 1</td>
+            <td>Last Name 1</td>
+            <td>25</td>
+            <td>USA</td>
+            <td>
+              <table border="1" cellspacing="0" width="100%">
+                <tr>
+                  <td>Golf</td>
+                  <td>Chess</td>
+                  <td>Base ball</td>
+                </tr>
+              </table>
+            </td>
+            <td>$1000</td>
+          </tr>
+
+          <tr>
+            <td>Last Name 2</td>
+            <td>30</td>
+            <td>UK</td>
+            <td>Golf, Chess, Football</td>
+            <td>$1000</td>
+          </tr>
+          <tr>
+            <td>First Name 3</td>
+            <td>Last Name 3</td>
+            <td>36</td>
+            <td rowspan="3">India</td>
+            <td rowspan="3">
+              <table border="1" cellspacing="0" width="100%">
+                <tr>
+                  <td>Golf</td>
+                </tr>
+                <tr>
+                  <td>Chess</td>
+                </tr>
+                <tr>
+                  <td>Baseball</td>
+                </tr>
+              </table>
+            </td>
+            <td>$1000</td>
+          </tr>
+          <tr>
+            <td>First Name 4</td>
+            <td>Last Name 4</td>
+            <td>36</td>
+            <td>$1000</td>
+          </tr>
+          <tr>
+            <td>First Name 5</td>
+            <td>Last Name 5</td>
+            <td>36</td>
+            <td>$1000</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="5">Total Income Count</td>
+            <td>$5000</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div>
+      <table>
+        <caption>
+          Distance between cities
+        </caption>
+
+        <thead>
+          <tr>
+            <td rowspan="2">Starting point</td>
+            <td rowspan="2">End poind</td>
+            <td rowspan="2">Distance, km</td>
+            <td colspan="2">Travel time, h</td>
+          </tr>
+          <tr>
+            <td>by car</td>
+            <td>by train</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">Gdansk</td>
+            <td>Berlin</td>
+            <td>500</td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>Praha</td>
+            <td>780</td>
+            <td>8</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <table>
+        <caption>
+          Distance between cities-2
+        </caption>
+        <colgroup>
+          <col span="2" style="background-color: aquamarine" />
+          <col style="background-color: antiquewhite" />
+          <col span="2" style="background-color: blueviolet" />
+        </colgroup>
+        <thead>
+          <tr>
+            <td rowspan="2">Starting point</td>
+            <td rowspan="2">End poind</td>
+            <td rowspan="2">Distance, km</td>
+            <td colspan="2">Travel time, h</td>
+          </tr>
+          <tr>
+            <td>by car</td>
+            <td>by train</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Gdansk</td>
+            <td>Berlin</td>
+            <td>500</td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>Praha</td>
+            <td>Budapest</td>
+            <td>780</td>
+            <td>8</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <table>
+        <caption>
+          use headers attribute
+        </caption>
+        <tr>
+          <th id="name">Name</th>
+          <th id="phone">Phone</th>
+        </tr>
+        <tr>
+          <td headers="name">John Doe</td>
+          <td headers="phone">+3805000000</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
