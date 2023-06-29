@@ -1,97 +1,84 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
 * {
-
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body{
-
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-image: url(./images/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-image: url(./images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.container{
-
-    max-width: 1200px;
-    margin: 80px auto;
-    box-shadow: 10px 10px 200px rgba(0,0,0,.5)
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  box-shadow: 10px 10px 200px rgba(0, 0, 0, 0.5);
 }
 
 /*
 a header poziciója relatív lesz, hogy a benne lévő menüt
 tudjuk abszolút pozicionálni
 */
-header{
-
-    position: relative;
-    /*ha a nav elemet kivesszük a header-ből és a container elé tesszük (teljesen a lap tetejére
+header {
+  position: relative;
+  /*ha a nav elemet kivesszük a header-ből és a container elé tesszük (teljesen a lap tetejére
     kerüljön a nav elem), akkor a position-t ki kell venni, mert akkor a html-ben meghatározott
     sorrendben töltődnek be az elemek.*/
-    background-image: url(./images/kaja1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 360px;
+  background-image: url(./images/kaja1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 360px;
 }
 
-nav{
-    position: sticky; /* sticky esetében a top-ot 0-ra kell állítani */ 
-    top: 0;
-    left: 0;
-    right: 0; /* ezzel lesz teljes szélességű nav */
-    background-color: rgba(190,0,0,.8);
+nav {
+  position: sticky; /* sticky esetében a top-ot 0-ra kell állítani */
+  top: 0;
+  left: 0;
+  right: 0; /* ezzel lesz teljes szélességű nav */
+  background-color: rgba(190, 0, 0, 0.8);
 }
 
 /* ha ez nincs akkor a nav háttere alá kerül a header alá, float elemek miatt
 clearfix megoldást kell használni ami a nav::after*/
-nav::after{
-
-    content: '';
-    clear: both;
-    display: table;
+nav::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-nav ul{
-
-    list-style: none;
-    padding: 0;
-    margin:0;
-
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-nav>ul>li { /* csak a közvetlen leszármazottakra vonatkozik */
+nav > ul > li {
+  /* csak a közvetlen leszármazottakra vonatkozik */
 
-    /* ezzel csinálok egymás alatti listából, egymás mellettit */
-    float: left;
+  /* ezzel csinálok egymás alatti listából, egymás mellettit */
+  display: inline-block;
 
-
-    /*
+  /*
 azt a menüpontot amihez tartozik almenü,
 relatív pozícióval kell megadnunk
 */
-} 
+}
 
 nav ul li a {
-
-    color: white;
-    text-decoration: none;
-    padding: 20px;
-    display: block;
-
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  display: block;
 }
 
-nav ul li a:hover{
-
-    background-color: rgba(0,0,0,.8);
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-
-nav .has-submenu{
-
-    position: relative;
+nav .has-submenu {
+  position: relative;
 }
 
 /*
@@ -99,68 +86,59 @@ ha van almenüje és föléhúzzuk az egereket,
 akkor a .submenu-t megjelenítjük
 */
 
-nav .has-submenu:hover .submenu{
-
-   display: block;
+nav .has-submenu:hover .submenu {
+  display: block;
 }
-
 
 /*
 az ::after szelektorral nyilat teszünk a menüpont neve mögé,
 ha van neki almenüje
 */
 nav .has-submenu::after {
-	content: '🢓';
-	color: white;
-	position: absolute; /* nav .has-submenu-höz képest van pozícionálva */
-	top: 23px;
-    right: 10px
+  content: "🢓";
+  color: white;
+  position: absolute; /* nav .has-submenu-höz képest van pozícionálva */
+  top: 23px;
+  right: 10px;
 }
 
 /*
 a nyíl miatt a jobb oldali padding-et feljebb toljuk
 */
-nav .has-submenu>a{
-
-    padding-right: 35px;
+nav .has-submenu > a {
+  padding-right: 35px;
 }
 
 /*
 az almenüt abszolút pozicionáljuk
 */
-nav .submenu{
-    position: absolute;
-    display: none;
-    width: 180px;
-
+nav .submenu {
+  position: absolute;
+  display: none;
+  width: 180px;
 }
 
-
-nav .submenu a{
-
-        background-color: rgba(190,0,0,1);
-        padding: 10px 20px;
-
+nav .submenu a {
+  background-color: rgba(190, 0, 0, 0.8);
+  padding: 10px 20px;
 }
 
-nav .submenu a:hover{
-
-    background-color: black
-
-
+nav .submenu a:hover {
+  background-color: black;
 }
 
-main{
-    background-color: white;
-    padding: 40px;
+main {
+  background-color: white;
+  padding: 20px;
 }
 
-main p{
-    line-height: 1.5; /* a body alapértelmezett betűméretének a 1.5-szerese */
+main p {
+  line-height: 1.5; /* a body alapértelmezett betűméretének a 1.5-szerese */
+  text-align: justify;
 }
 
-main h1{
-    margin-top: 0;
+main h1 {
+  margin-top: 0;
 }
 
 /*
@@ -169,25 +147,25 @@ a left: 0 és right: 0 értékeknek köszönhetően
 ki fog futni 100% szélesre
 */
 .cookie-accept {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0,0,0,.6);
-	color: white;
-	padding: 20px;
-	text-align: center
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 .cookie-accept button {
-	background: yellow;
-	color: black;
-	border: 0;
-	margin-left: 10px;
-	padding: 5px 10px;
-	border-radius: 3px;
-	cursor: pointer
+  background: yellow;
+  color: black;
+  border: 0;
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
 }
 .cookie-accept button:hover {
-	background: red;
-	color: white
+  background: red;
+  color: white;
 }

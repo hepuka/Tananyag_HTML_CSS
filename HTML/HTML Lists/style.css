@@ -5,3 +5,15 @@ ul {
 /* ul{
     list-style-image: url("star.jpg");
 } */
+
+/* egymás mellé teszi a listaelemeket mint egy navlink
+
+ul li {
+  display: inline;
+  margin-right: 20px;
+}
+*/
+
+ul li a {
+  text-decoration: none;
+}

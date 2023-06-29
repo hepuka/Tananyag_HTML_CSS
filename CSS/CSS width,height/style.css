@@ -1,0 +1,15 @@
+/* ha 500px alá esik a szélesség akkor új sorba töri a tartalmat */
+
+#withmaxwidth {
+  max-width: 500px;
+  height: 100px;
+  background-color: powderblue;
+  padding: 5px;
+}
+
+/* ha 500px alá esik a szélesség akkor a tartalom nem látszik a jobb oldalon */
+#simplewidth {
+  width: 500px;
+  height: 100px;
+  background-color: powderblue;
+}
