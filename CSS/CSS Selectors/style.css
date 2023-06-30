@@ -1,0 +1,90 @@
+
+/* type selector */
+ul { 
+    list-style-type: none; 
+}
+
+/* class selector */
+.item{
+    color: blue;
+}
+
+.checked {
+    font-weight: bold; 
+}
+
+#lastelement{
+   color: red;
+}
+
+/* Descendant Сombinator (element element) */
+section h2 {
+    color: green
+}
+
+/* direct child combinator (element>element) */
+section > h2 {
+    color: royalblue;
+}
+
+
+/* adjacent  sibling combinator */
+/* a h2 szintjén lévő első p elemre vinatkozik */
+h2+p {  
+    color: tomato;  
+}
+
+/* Subsequent-sibling combinator */
+/* a h2 szintjén lévő összes p elemre vinatkozik */
+h2~p {  
+    color: tomato;  
+}
+
+
+/* Attribute Selector */
+
+/* minden olyan elemre vonatkozik amely tartalmaz class attribútumot, az mindegy, hogy mi az értéke */
+[class] {
+    color: blueviolet;
+}
+
+/* csak olyan megadott elemre(li) vonatkozik amelynek van accesskey atrribútuma */
+li [accesskey] { 
+      color: blueviolet;  
+} 
+
+/* minden olyan elemre amelynek megvan adva az class item  */
+[class='item'] {color: blueviolet;}
+
+/* olyan elemre vonatkozik amelynek a class-ja tartalmazz az item értéket */
+[class~='item'] {color: blueviolet;}
+
+[class|='item'] {color: blueviolet;}
+
+li[class^="it"] {color: blueviolet;}
+
+li[class$="checked"] {color: blueviolet;}
+
+[class*="check"] {color: blueviolet;}
+
+
+/* Pseudo-classes 
+:link
+:visited
+:active
+:focus
+:hover
+:not
+:first-child
+:last-child
+:after
+:checked
+:nth-child() */
+
+
+/* Pseudo elmenets 
+::after
+::before
+::first-line
+::first-letter
+::selection */
