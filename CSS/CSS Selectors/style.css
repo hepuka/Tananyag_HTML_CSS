@@ -16,23 +16,27 @@ ul {
   color: red;
 }
 
-/* Descendant Сombinator (element element) - leszármazott kombinátor*/
+/* Combinators */
+
+/* Descendant selector (element element) - leszármazott szelektor
+minden h2-re érvényes ami a section-ben van
+*/
 section h2 {
   color: green;
 }
 
-/* direct child combinator (element > element) - közvetlen gyermek kombinátor*/
+/* direct child selector (element > element) - közvetlen gyermek szelektor*/
 section > h2 {
   color: royalblue;
 }
 
-/* adjacent  sibling combinator - szomszédos testvér kombinátor*/
+/* adjacent  sibling selector - szomszédos testvér szelektor*/
 /* a h2 szintjén lévő első p elemre vinatkozik */
 h2 + p {
   color: tomato;
 }
 
-/* Subsequent-sibling combinator - a h2 szintjén lévő összes p elemre vinatkozik*/
+/* Subsequent-sibling selector - általános testvér szelektor. Ez esetben a h2 szintjén lévő összes p elemre vinatkozik*/
 h2 ~ p {
   color: tomato;
 }
@@ -81,15 +85,24 @@ li[class$="checked"] {
 
 :link
 :visited
-:active
-:focus
 :hover
+:active
+
+:focus
 :not
-:first-child
-:last-child
-:after
-:checked
-:nth-child() */
+
+:first-child()
+:last-child()
+
+:first-of-type()
+:last-of-type()
+
+:nth-child()
+:nth-of-type()
+
+:nth-last-child()
+:nth-last-of-type()
+*/
 
 /* Pseudo elmenets -a szeletor kiegészítése, amellyel a HTML struktúrában még nem definiált elem stílusát lehet beállítani
 
