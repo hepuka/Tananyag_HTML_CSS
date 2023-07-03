@@ -18,25 +18,25 @@ ul {
 
 /* Combinators */
 
-/* Descendant selector (element element) - leszármazott szelektor
+/* 1.Descendant selector (element element) - leszármazott szelektor
 minden h2-re érvényes ami a section-ben van
 */
 section h2 {
   color: green;
 }
 
-/* direct child selector (element > element) - közvetlen gyermek szelektor*/
+/* 2.direct child selector (element > element) - közvetlen gyermek szelektor*/
 section > h2 {
   color: royalblue;
 }
 
-/* adjacent  sibling selector - szomszédos testvér szelektor*/
+/* 3.adjacent  sibling selector - szomszédos testvér szelektor*/
 /* a h2 szintjén lévő első p elemre vinatkozik */
 h2 + p {
   color: tomato;
 }
 
-/* Subsequent-sibling selector - általános testvér szelektor. Ez esetben a h2 szintjén lévő összes p elemre vinatkozik*/
+/* 4.Subsequent-sibling selector - általános testvér szelektor. Ez esetben a h2 szintjén lévő összes p elemre vinatkozik*/
 h2 ~ p {
   color: tomato;
 }
@@ -105,9 +105,28 @@ li[class$="checked"] {
 */
 
 /* Pseudo elmenets -a szeletor kiegészítése, amellyel a HTML struktúrában még nem definiált elem stílusát lehet beállítani
+*/
 
-::after
-::before
-::first-line
-::first-letter
-::selection */
+/* p elem elé három +-ot rak */
+p::after {
+  content: "+++";
+}
+p::before {
+  content: "+++";
+}
+
+/* a p első sorátmódosítja */
+p::first-line {
+  background-color: red;
+}
+
+/* a p szövegének első betűjét módosítja */
+p::first-letter {
+  font-size: 30px;
+}
+
+/* a szöveg kijelölésének a stílusát határozza meg */
+p::selection {
+  background-color: blue;
+  color: aqua;
+}
