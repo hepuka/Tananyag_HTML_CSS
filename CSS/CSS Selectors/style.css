@@ -1,74 +1,84 @@
-
 /* type selector */
-ul { 
-    list-style-type: none; 
+ul {
+  list-style-type: none;
 }
 
 /* class selector */
-.item{
-    color: blue;
+.item {
+  color: blue;
 }
 
 .checked {
-    font-weight: bold; 
+  font-weight: bold;
 }
 
-#lastelement{
-   color: red;
+#lastelement {
+  color: red;
 }
 
-/* Descendant Сombinator (element element) */
+/* Descendant Сombinator (element element) - leszármazott kombinátor*/
 section h2 {
-    color: green
+  color: green;
 }
 
-/* direct child combinator (element>element) */
+/* direct child combinator (element > element) - közvetlen gyermek kombinátor*/
 section > h2 {
-    color: royalblue;
+  color: royalblue;
 }
 
-
-/* adjacent  sibling combinator */
+/* adjacent  sibling combinator - szomszédos testvér kombinátor*/
 /* a h2 szintjén lévő első p elemre vinatkozik */
-h2+p {  
-    color: tomato;  
+h2 + p {
+  color: tomato;
 }
 
-/* Subsequent-sibling combinator */
-/* a h2 szintjén lévő összes p elemre vinatkozik */
-h2~p {  
-    color: tomato;  
+/* Subsequent-sibling combinator - a h2 szintjén lévő összes p elemre vinatkozik*/
+h2 ~ p {
+  color: tomato;
 }
-
 
 /* Attribute Selector */
 
 /* minden olyan elemre vonatkozik amely tartalmaz class attribútumot, az mindegy, hogy mi az értéke */
 [class] {
-    color: blueviolet;
+  color: blueviolet;
 }
 
 /* csak olyan megadott elemre(li) vonatkozik amelynek van accesskey atrribútuma */
-li [accesskey] { 
-      color: blueviolet;  
-} 
+li [accesskey] {
+  color: blueviolet;
+}
 
-/* minden olyan elemre amelynek megvan adva az class item  */
-[class='item'] {color: blueviolet;}
+/* minden olyan elemre amelynek megvan adva a class mint item  */
+[class="item"] {
+  color: blueviolet;
+}
 
-/* olyan elemre vonatkozik amelynek a class-ja tartalmazz az item értéket */
-[class~='item'] {color: blueviolet;}
+/* olyan elemre vonatkozik amelynek a class-ja tartalmazza az item értéket */
+[class~="item"] {
+  color: blueviolet;
+}
 
-[class|='item'] {color: blueviolet;}
+/* minden olyan elemre vonatkozik amelynek class értéke item vagy item- karakterekkel kezdődik */
+[class|="item"] {
+  color: blueviolet;
+}
+/* minden olyan elemre vonatkozik amelynek class értéke it karakterekkel kezdődik */
+li[class^="it"] {
+  color: blueviolet;
+}
 
-li[class^="it"] {color: blueviolet;}
+/* minden olyan elemre vonatkozik amelynek class értéke checked-re végződik*/
+li[class$="checked"] {
+  color: blueviolet;
+}
+/* minden olyan elemre vonatkozik amelynek class-ja tartalmazza a checked értéket, vagyis az attribútumértékében tudunk keresni szövegrészeket*/
+[class*="check"] {
+  color: blueviolet;
+}
 
-li[class$="checked"] {color: blueviolet;}
+/* Pseudo-classes -  pszeudoosztály önmagában nem létezik, egy szelektorhoz kell csatolni. Beállítja a szelektornak az adott állapotát, amelyhez kapcsolódik.
 
-[class*="check"] {color: blueviolet;}
-
-
-/* Pseudo-classes 
 :link
 :visited
 :active
@@ -81,11 +91,10 @@ li[class$="checked"] {color: blueviolet;}
 :checked
 :nth-child() */
 
+/* Pseudo elmenets -a szeletor kiegészítése, amellyel a HTML struktúrában még nem definiált elem stílusát lehet beállítani
 
-/* Pseudo elmenets 
 ::after
 ::before
 ::first-line
 ::first-letter
 ::selection */
-
