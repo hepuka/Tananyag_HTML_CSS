@@ -2,7 +2,7 @@
 
 #withmaxwidth {
   max-width: 500px;
-  height: 100px;
+  height: 100%;
   background-color: powderblue;
   padding: 5px;
 }
@@ -11,5 +11,5 @@
 #simplewidth {
   width: 500px;
   height: 100px;
-  background-color: powderblue;
+  background-color: antiquewhite;
 }
