@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+}
+
+.blue {
+  background-color: blue;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+
+header,
+footer {
+  color: #fff;
+  text-align: center;
+  height: 100px;
+  font-size: 3rem;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+footer {
+  background-color: #000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+a:visited {
+  color: #fff;
+}
+
+.socialcontainer {
+  position: fixed;
+  top: 40%;
+  left: 5px;
+  z-index: 1;
+}
+
+.social {
+  display: block;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 10px;
+  background-color: royalblue;
+  color: #fff;
+  font-size: inherit;
+  padding: 1rem;
+}
