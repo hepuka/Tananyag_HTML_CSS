@@ -1,0 +1,10 @@
+.columns {
+  columns: 4 250px;
+  column-rule: 2px solid black;
+  column-gap: 3rem;
+}
+
+.columns p {
+  margin-top: 0;
+  text-align: justify;
+}

@@ -1,0 +1,1 @@
+Mivel az oszlopok között van 3rem gap, így a margin-top.ot 0-ra lehet tenni, így létrejön a margin collapse
