@@ -22,7 +22,7 @@ header {
 }
 
 .wrapper {
-  max-width: 1000px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -52,9 +52,6 @@ nav a {
 }
 
 nav a:hover {
-  /*nav a-nak a hover állapota amikor fölé húzzuk az egeret*/
-
-  padding: 15px;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -88,6 +85,12 @@ main {
     display: table;
   } 
  */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
 
 main img {
   float: left;
