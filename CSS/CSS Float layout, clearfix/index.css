@@ -1,87 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
 * {
-
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body{
-
-    margin: 0;
-    background: url(./images/bg.jpg);
-    background-attachment: fixed; /*görgetéskor a háttérkép nem mozdul el*/
-    font-family: 'Raleway', sans-serif;
-
+body {
+  margin: 0;
+  background: url(./images/bg.jpg);
+  background-attachment: fixed; /*görgetéskor a háttérkép nem mozdul el*/
+  font-family: "Raleway", sans-serif;
 }
 
-header{
-
-    background-image: url(./images/table.jpg);
-    color: white;
-    font-size: 80px;
-    font-weight: 700px;
-    /*height: 300px; helyett padding-et használunk*/
-    padding: 80px 60px;
-    text-shadow: 0 0 20px rgba(0,0,0,0.8);
+header {
+  background-image: url(./images/table.jpg);
+  color: white;
+  font-size: 80px;
+  font-weight: 700px;
+  /*height: 300px; helyett padding-et használunk*/
+  padding: 80px 60px;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
-.wrapper{
-
-    max-width: 1000px;
-    margin: 0 auto;
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-nav{
-    /*float-al tudom az elemek helyzetét megadni.
+nav {
+  /*float-al tudom az elemek helyzetét megadni.
     mivel egymás mellé szeretném rakni a nav-ot a main-el, így mindkettőnek float left kell
     és %-ban felosztani a helyet a 2 elem között*/
-    width: 25%;
-    float: left;
-
+  width: 25%;
+  float: left;
 }
 
 nav ul {
-
-    margin: 0;
-    padding: 30px;
-    list-style: none; /*kiszedi a pöttyöt a felsorolásjelet*/
+  margin: 0;
+  padding: 30px;
+  list-style: none;
 }
 
-nav ul li{
-
-    border-bottom: 1px dashed rgba(255,255,255,0.2);
+nav ul li {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
 }
 
-nav a{
-
-    color: white;
-    text-decoration: none;
-    padding: 15px 0;
-    display: block; /*mivel padding-et is használunk inlilne-ról át kell rakni block-ra*/
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  display: block; /*mivel padding-et is használunk inline-ról át kell rakni block-ra*/
 }
 
-nav a:hover{ /*nav a-nak a hover állapota amikor fölé húzzuk az egeret*/
+nav a:hover {
+  /*nav a-nak a hover állapota amikor fölé húzzuk az egeret*/
 
-    padding: 15px;
-    background-color: rgba(255,255,255,0.1);
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-main{
-
-    width: 75%;
-    background-color: white;
-    float: left;
-    padding: 30px;
-  
+main {
+  width: 75%;
+  background-color: white;
+  float: left;
+  padding: 30px;
 }
 
-.content{
-
-    background-color: #333030;
-    display: flow-root;
+.content {
+  background-color: #333030;
+  display: flow-root;
 }
 
-    /*a float-olás miatt a nav és a main után található elemek ezen két elem mögé helyeződik el.
+/*a float-olás miatt a nav és a main után található elemek ezen két elem mögé helyeződik el.
     ennek a megoldása a clearfix
     https://www.w3schools.com/howto/howto_css_clearfix.asp
     ezzel megoldható a float-olás miatt keletkező tartalom felcsúszási probléma kiküszöbölésére
@@ -99,78 +88,64 @@ main{
     display: table;
   } 
  */
- 
-main img {
 
-    float: left;
+main img {
+  float: left;
 }
 
 main p {
-
-    text-align: justify;
-    line-height: 23px;
+  text-align: justify;
+  line-height: 23px;
 }
 
-.float-left{
-
-    float: left;
-    margin: 0 20px 20px 0;
+.float-left {
+  float: left;
+  margin: 0 20px 20px 0;
 }
 
-.float-right{
-
-    float: right;
-    margin: 0 0 20px 20px;
+.float-right {
+  float: right;
+  margin: 0 0 20px 20px;
 }
 
-footer{
-
-    padding: 20px 0;
-    background-color: aliceblue;
-
+footer {
+  padding: 20px 0;
+  background-color: aliceblue;
 }
 
 footer a {
-
-    color: black;
-
+  color: black;
 }
 
-footer .left{
-
-float: left;
-padding-left: 30px;
+footer .left {
+  float: left;
+  padding-left: 30px;
 }
 
-footer .right{
-
-    float: right;
-    padding-right: 30px;
+footer .right {
+  float: right;
+  padding-right: 30px;
 }
 
-footer .right a:not(:nth-child(3)){
-    
-    margin-right: 10px
-
+footer .right a:not(:nth-child(3)) {
+  margin-right: 10px;
 }
 
-h1{
-    margin-top: 0;
- 
-    
+h1 {
+  margin-top: 0;
 }
 
-h1 span{
-    font-size: 50px;
-    background-color: darkgreen;
-    color: white;
+h1 span {
+  font-size: 50px;
+  background-color: darkgreen;
+  color: white;
 
-    /*https://www.w3schools.com/csSref/css3_pr_box-decoration-break.asp*/
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    
-    border-left: 10px solid darkgreen;
-    border-right: 10px solid darkgreen;
-    border-bottom: 7px solid darkgreen;
-    line-height: 75px;
+  /*https://www.w3schools.com/csSref/css3_pr_box-decoration-break.asp*/
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+
+  border-left: 10px solid darkgreen;
+  border-right: 10px solid darkgreen;
+  border-bottom: 7px solid darkgreen;
+  line-height: 75px;
 }
