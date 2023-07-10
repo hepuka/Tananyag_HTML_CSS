@@ -1,0 +1,92 @@
+.divitem {
+  border: 1px solid #d35d47;
+  padding: 20px;
+}
+.wrapper {
+  text-align: right;
+  width: 50%;
+}
+.wrapper div {
+  display: inline-block;
+  text-align: center;
+  width: 25%;
+}
+
+.main-content {
+  direction: rtl;
+}
+
+/* centered element: use the properties margin-left and margin-right with the values auto. */
+.centerwrapper {
+  border: 1px solid #d35d47;
+  height: 200px;
+  padding: 20px;
+  width: 200px;
+}
+.item {
+  background-color: #76cdd8;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+ul {
+  margin-top: 20px;
+  font-size: 0px;
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+  font-size: x-large;
+}
+
+a {
+  background-color: #76cdd8;
+  color: white;
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  width: 200px;
+}
+.new {
+  color: red;
+  vertical-align: super;
+  line-height: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.tablewrapper {
+  border: 1px solid #d35d47;
+  display: table-cell;
+  height: 200px;
+  vertical-align: middle;
+  width: 200px;
+}
+.tableitem {
+  background-color: #76cdd8;
+  height: 60%;
+  width: 60%;
+  /* margin: auto; ezzel középre kerül */
+}
+
+.absolutewrapper {
+  border: 1px solid #d35d47;
+  height: 200px;
+  position: relative;
+  width: 200px;
+}
+
+.absoluteitem {
+  background-color: #76cdd8;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 60%;
+  height: 60%;
+}
