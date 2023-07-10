@@ -1,0 +1,27 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+a {
+  background-color: #76cdd8;
+  border: 2px solid white;
+  color: white;
+  display: block;
+  font-size: x-large;
+  padding: 15px;
+  text-decoration: none;
+  width: 200px;
+  transition-property: width, background-color;
+
+  /* első érték a width ideje a 2.érték a háttér ideje */
+  transition-duration: 1.1s, 1.1s;
+}
+
+a:hover {
+  background-color: #cedb56;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 300px;
+}

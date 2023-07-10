@@ -1,0 +1,146 @@
+.lingrad {
+  width: 600px;
+  height: 600px;
+  /* angle of the gradient:
+   to top (0deg), 
+   to right (90deg),
+   to bottom (180deg), 
+   to left (270deg). 
+   */
+
+  /* A gradient tilted 45 degrees,
+   starting blue and finishing red */
+  background: linear-gradient(45deg, blue, red);
+
+  /* A gradient going from the bottom right to the top left corner,
+   starting blue and finishing red */
+  background: linear-gradient(to left top, blue, red);
+
+  /* Color stop: A gradient going from the bottom to top,
+   starting blue, turning green at 40% of its length,
+   and finishing red */
+  background: linear-gradient(0deg, blue, green 40%, red);
+
+  /* Multi-position color-stops are allowed. A color can be declared as two adjacent color-stops by including both positions in the CSS declaration.*/
+  background: linear-gradient(red, orange 10% 30%, yellow 50% 70%, green 90%);
+
+  /* solid red from the start to the 10% mark and solid blue from 90% to the end. Between 10% and 90% the color transitions from red to blue, however, the midpoint of the transition is at the 30% mark rather than 50% as would have happened without the 30% color hint. */
+  background: linear-gradient(red 10%, 30%, blue 90%);
+
+  /* Color hint: A gradient going from the left to right,
+   starting red, getting to the midpoint color
+   10% of the way across the length of the gradient,
+   taking the rest of the 90% of the length to change to blue */
+  background: linear-gradient(0.25turn, red, 10%, blue);
+
+  /* Multi-position color stop: A gradient tilted 45 degrees,
+   with a red bottom-left half and a blue top-right half,
+   with a hard line where the gradient changes from red to blue */
+  background: linear-gradient(45deg, red 0 50%, blue 50% 100%);
+
+  /* Gradient that starts at 60% of the gradient line */
+  background: linear-gradient(135deg, orange 60%, cyan);
+
+  /* stripe background */
+  background: linear-gradient(
+    to right,
+    red 20%,
+    orange 20% 40%,
+    yellow 40% 60%,
+    green 60% 80%,
+    blue 80%
+  );
+}
+
+.radgrad {
+  width: 600px;
+  height: 600px;
+
+  background: radial-gradient(
+    circle at 100%,
+    #333,
+    #333 50%,
+    #eee 75%,
+    #333 75%
+  );
+
+  /* középpontból kifelé kékből-sárga */
+  background: radial-gradient(circle, #008ace, #cedb56);
+  background: radial-gradient(#e66465, #9198e5);
+
+  /* to control the size of the elliptical gradient, set it to %, em, or px. The first value sets the width of the ellipse, and the second value sets its height. */
+  background: radial-gradient(closest-side at 50% 30%, #008ace, #cedb56);
+  background: radial-gradient(farthest-side at 50% 30%, #008ace, #cedb56);
+  background: radial-gradient(closest-corner at 50% 30%, #008ace, #cedb56);
+  background: radial-gradient(farthest-corner at 50% 30%, #008ace, #cedb56);
+
+  background: radial-gradient(ellipse at top, #e66465, transparent),
+    radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+}
+
+.ball {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 90% 25%, grey, lightgrey);
+}
+
+.shadow {
+  font-size: 30px;
+  text-shadow: 2px 4px 1px grey;
+}
+
+.multi-shadow {
+  text-shadow: 1px 0px 1px #76cdd8, 0px 1px 1px #d35d47, 2px 1px 1px #76cdd8,
+    1px 2px 1px #d35d47, 3px 2px 1px #76cdd8, 2px 3px 1px #d35d47,
+    3px 2px 1px #76cdd8, 2px 3px 1px #d35d47;
+}
+
+.divs {
+  background-color: #cedb56;
+  border: 3px solid #ffc000;
+  height: 150px;
+  width: 300px;
+  text-align: center;
+  top: 10px;
+  display: inline-block;
+}
+
+.shadow-inner {
+  box-shadow: inset 4px 5px 8px 5px #76cdd8;
+}
+.shadow-outer {
+  box-shadow: 4px 5px 8px 5px #76cdd8;
+}
+
+.div2 {
+  background-color: #cedb56;
+  border: 3px solid #ffc000;
+  height: 150px;
+  width: 300px;
+  margin-top: 20px;
+}
+
+/* The property box-shadow can set several shadows at the same time. To do this, you have to list the parameter groups for each shadow, separated by commas. */
+.shadow2 {
+  box-shadow: 10px 8px 3px #39c2d7, 20px 16px 6px #464547, red 30px 24px 9px;
+}
+
+.imgs {
+  margin-top: 40px;
+}
+
+.imgs img {
+  filter: blur(2px);
+  filter: brightness(70%);
+  filter: contrast(30%);
+  filter: saturate(300%);
+  filter: invert(100%);
+  filter: sepia(110%);
+  filter: opacity(70%);
+  filter: grayscale(100%);
+}
+
+.imgs img:hover {
+  filter: none;
+}
