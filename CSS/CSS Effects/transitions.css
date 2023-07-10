@@ -13,15 +13,183 @@ a {
   padding: 15px;
   text-decoration: none;
   width: 200px;
-  transition-property: width, background-color;
 
-  /* első érték a width ideje a 2.érték a háttér ideje */
-  transition-duration: 1.1s, 1.1s;
+  /* 
+  transition-property: width, background-color;
+  transition-duration: 1.1s, 1.1s; */
+
+  /* 
+  transition: width 1.1s, background-color 1.1s;
+  transition-delay: 0.3s;
+  transition-timing-function: ease-in; */
+
+  /* The property transition is generic for properties: transition-property, transition-duration, transition-timing-function, transition-delay. */
+  transition: all 0.3s ease-in 0.2s;
 }
 
 a:hover {
   background-color: #cedb56;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  /* border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px; */
   width: 300px;
+}
+
+/* 2.példa */
+.box {
+  display: inline-block;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000ff;
+
+  /* transition: background-color 2s, rotate 2s, opacity 2s, border-radius 2s; */
+
+  /* 5 lépésben fokozatosan hajtódik végre */
+  transition: all 2s steps(5, start);
+
+  transition: all 2s ease;
+}
+
+.box:hover {
+  background-color: red;
+  rotate: 90deg;
+  opacity: 80%;
+  border-radius: 50%;
+}
+
+/* 3.példa */
+.menu2 {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 20px;
+}
+
+.menu2 a {
+  flex: 1;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+
+  /* The property transition is generic for properties: transition-property, transition-duration, transition-timing-function, transition-delay. */
+  transition: all 0.6s linear;
+}
+
+.menu2 a:hover,
+.menu2 a:focus {
+  background-color: #fff;
+  color: #333;
+}
+
+/* ---------------Transformations--------------- */
+
+/* translate() - offsets the element from its normal position to the right and down using the X and Y coordinates. 
+
+rotate() - rotates an element by a specified number of degrees. If the value is positive, the element is rotated clockwise, negative - counter clockwise.
+
+scaleX() - changes the width of the element. If the value is greater than 1, the element grows in width, if the value is between 1 and 0, the element becomes narrower. The negative values display the element horizontally.
+scaleY() - changes the height of an element. If the value is greater than 1, the element becomes taller, if the value is between 1 and 0 — lower. The negative values display the element vertically. For example transform: scaleY(2).
+scale() - resizes elements up or down according to the given width and height values.
+*/
+
+.translate img:hover {
+  /* transform: translate(20px, 20px); */
+  /* transform: rotate(25deg); */
+  /* transform: scale(1.5) */
+  transform: scaleX(-1);
+  /* transform: scaleY(-1); */
+}
+
+/* skewX() - skews the element along the x-axis by the given angle.
+skewY() - skews the element along the y-axis by the given angle.
+skew() - skews the element along the x and y axes at the given angles. */
+
+.menu3 li {
+  display: inline-block;
+  transform: skew(-15deg);
+}
+
+/* 3D kártya forgatás */
+.card-flipper {
+  display: inline-block;
+  height: 300px;
+  width: 200px;
+  transform-style: preserve-3d;
+  transition: transform 1s linear;
+  cursor: pointer;
+}
+
+.card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  color: white;
+  background-color: #008ace;
+  font-size: xx-large;
+}
+
+.card-back {
+  color: #222222;
+  background-color: #cedb56;
+  transform: rotateY(180deg);
+}
+
+.card-flipper:hover {
+  transform: rotateY(180deg);
+}
+
+/* ---Animation--- */
+@keyframes grayToColorFilter {
+  from {
+    filter: grayscale();
+  }
+
+  to {
+    filter: none;
+  }
+}
+
+.rotate:hover {
+  animation-name: grayToColorFilter;
+  animation-duration: 4s;
+}
+
+/* 2.példa */
+
+.gallery {
+  margin-top: 20px;
+}
+
+.gallery img:hover {
+  animation-name: shake;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 0.3s;
+  animation-iteration-count: 2;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(20deg);
+  }
+  20% {
+    transform: rotate(-20deg);
+  }
+  40% {
+    transform: rotate(20deg);
+  }
+  60% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
 }
