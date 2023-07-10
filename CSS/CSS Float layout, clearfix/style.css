@@ -4,12 +4,48 @@
   width: 400px;
   overflow: auto;
 }
+
 .container img {
   float: left;
   margin-right: 10px;
 }
 
-p {
+.container p {
   margin-top: 0;
   text-align: justify;
+}
+
+.container2 {
+  border: 1px solid red;
+  padding: 20px;
+  width: 400px;
+}
+.clearfix {
+  clear: both;
+}
+.container2 img {
+  float: left;
+  margin-right: 10px;
+}
+.container2 p,
+.container3 p {
+  margin: 0;
+  text-align: justify;
+}
+
+.container3 {
+  border: 1px solid red;
+  padding: 20px;
+  width: 400px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.container3 img {
+  float: left;
+  margin-right: 10px;
 }

@@ -3,18 +3,18 @@ body {
 }
 
 #side-profile {
-  background-color:#7b1fa2;
+  background-color: #7b1fa2;
 }
 
 #side-all {
-  background-color:#0277bd;
+  background-color: #0277bd;
 }
 #side-youlike {
-  background-color:#c2185b;
+  background-color: #c2185b;
 }
 
 #side-likeyou {
-  background-color:#f9a825;
+  background-color: #f9a825;
 }
 
 .side-box {
@@ -33,7 +33,6 @@ body {
 
 .post-list {
   padding: 0px;
-
 }
 
 .post {
@@ -52,7 +51,7 @@ body {
 
 .post div:nth-child(2) {
   font-size: 12px;
-  border-top: 1px solid #184D8A;
+  border-top: 1px solid #184d8a;
   padding-top: 15px;
 }
 
@@ -61,7 +60,6 @@ body {
   display: block;
   float: right;
 }
-
 
 #post-form {
   text-align: center;
@@ -81,7 +79,7 @@ body {
 
 #post-form button {
   color: white;
-  background-color: #00897B;
+  background-color: #00897b;
   font-size: 16px;
   line-height: 45px;
   height: 45px;
@@ -94,9 +92,8 @@ body {
 }
 
 #post-form button:hover {
-  background-color: #00695C;
+  background-color: #00695c;
 }
-
 
 #wrapper {
   max-width: 808px;
@@ -125,10 +122,10 @@ body {
   float: left;
 }
 
-
 /*650px alatt egymás alá kerülnek a dobozok*/
-@media(max-width: 768px) {
-  #profile-area, #feed-area {
+@media (max-width: 768px) {
+  #profile-area,
+  #feed-area {
     width: 100%;
     max-width: 100%;
     padding-left: 0px;
@@ -151,10 +148,9 @@ body {
     margin-bottom: 15px;
     overflow-y: auto;
   }
-
 }
 
-@media(max-width: 480px) {
+@media (max-width: 480px) {
   .side-box {
     width: 100%;
   }
@@ -167,4 +163,4 @@ body {
   .boxcontent {
     height: auto;
   }
-} 
+}
