@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  font-size: 10px;
+  color: #333;
+  width: 62.5%;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #ccc;
+}
+nav ul li a > span {
+  color: red;
+}
+
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.message, .warning, .error, .success {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+
+.warning2, .error2, .success2 {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success2 {
+  border-color: green;
+}
+
+.error2 {
+  border-color: red;
+}
+
+.warning2 {
+  border-color: yellow;
+}
+
+.a {
+  background-color: #333;
+}
+
+.b {
+  background-color: #333;
+}
+
+.c {
+  background-color: #333;
+}
+
+.d {
+  background-color: #333;
+}
+
+/*# sourceMappingURL=base.css.map */

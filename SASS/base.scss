@@ -1,0 +1,101 @@
+@import "reset";
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$secondary-color: #ccc;
+$third-color: red;
+
+nav {
+  font-size: 10px;
+  color: $primary-color;
+  width: 600px/960px * 100%;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+
+        &:hover {
+          color: $secondary-color;
+        }
+
+        > span {
+          color: $third-color;
+        }
+      }
+    }
+  }
+}
+
+//Mixins are functions that allow the reuse of properties throughout our stylesheet.
+
+@mixin border-radius($radius: 5px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.box {
+  @include border-radius(10px);
+}
+
+//EXTEND, INHERITANCE
+
+//A success, error és a warning class-ok a message stílusát megörökli,
+// majd kiterjesztik azt a sajátjaival
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+.warning {
+  @extend .message;
+  border-color: yellow;
+}
+
+//PLACEHOLDERS
+
+//készítünk egy placeholder-t ami egy template és ezt használjuk fel
+%message_placeholder {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success2 {
+  @extend %message_placeholder;
+  border-color: green;
+}
+
+.error2 {
+  @extend %message_placeholder;
+  border-color: red;
+}
+
+.warning2 {
+  @extend %message_placeholder;
+  border-color: yellow;
+}
+
+//LOOPS
+@each $var in a, b, c, d {
+  .#{$var} {
+    background-color: $primary-color;
+  }
+}
