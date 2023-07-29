@@ -1,0 +1,7 @@
+@mixin childs($rs, $re, $cs, $ce, $bc) {
+  grid-row-start: $rs;
+  grid-row-end: $re;
+  grid-column-start: $cs;
+  grid-column-end: $ce;
+  background-color: $bc;
+}
